@@ -5,6 +5,7 @@ import NextButton from "@/ui/onboarding/buttons/next-button";
 import SkipButton from "@/ui/onboarding/buttons/Skip-button";
 import styles from "@/app/tutorial/page.module.css";
 import ProgressBar from "@/ui/onboarding/progress-bar/progress-bar";
+import OptionButton from "@/ui/onboarding/buttons/Option-button";
 
 export default function Tutorial() {
   const [selectedCategories, setSelectedCategories] = useState([]);
@@ -32,11 +33,12 @@ export default function Tutorial() {
       ) : (
         <div className={styles.content + " " + styles.personalizationTwo}>
           <h2>Select all categories you often shop</h2>
-          {/* Chips for  'Select all categories you often shop'*/}
-          <SimpleChip text="Hello" onClick={("text", false)} />
-          <SimpleChip text="Hello" onClick={("hello", false)} />
-          <SimpleChip text="Hello" onClick={("hello", false)} />
-          <SimpleChip text="Hello" onClick={("hello", false)} />
+          <div className="flex flex-col items-center">
+            <OptionButton text="Hello" onClick={() => {}} />
+            <OptionButton text="Hello" onClick={() => {}} />
+            <OptionButton text="Hello" onClick={() => {}} />
+            <OptionButton text="Hello" onClick={() => {}} />
+          </div>
         </div>
       )}
 
