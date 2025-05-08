@@ -46,21 +46,22 @@ export default function Tutorial() {
       <div className={styles.container}>
         {tutorialStep === 0 && (
           <div className="flex-1 flex flex-col items-center justify-center text-center px-4">
-            <h1>Find your events and discounts</h1>
+            <h2>Step 1: Find your events and discounts</h2>
             <p>Search for your next game plan and deals.</p>
           </div>
         )}
         {tutorialStep === 1 && (
           <div className="flex-1 flex flex-col items-center justify-center text-center px-4">
-            <h1>Save it and use anytime</h1>
+            <h2>Step 2: Save it and use anytime</h2>
             <p>Save your events and discount in Premiere.</p>
           </div>
         )}
         {tutorialStep === 2 && (
           <div className="flex-1 flex flex-col items-center justify-center text-center px-4">
-            <h1>Stay on the loop and start saving!</h1>
+            <h2>Step 3: Stay on the loop and start saving!</h2>
             <p>
-                We’ll keep you in touch for events and deals happening in Vancouver.
+              We’ll keep you in touch for events and deals happening in
+              Vancouver.
             </p>
           </div>
         )}
