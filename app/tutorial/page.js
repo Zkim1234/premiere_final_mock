@@ -10,11 +10,13 @@ import YesNoButton from "@/ui/onboarding/buttons/Yes-No-button";
 
 export default function Tutorial() {
   const [selectedCategories, setSelectedCategories] = useState([]);
-  const [currentStep, setCurrentStep] = useState(1);
+  const [currentStep, setCurrentStep] = useState(0);
   const [selectedNotification, setSelectedNotification] = useState("Yes");
 
-  const handleNext = () => {
-    if (currentStep < 5) {
+  const handleNext = (skip = false) => {
+    if (currentStep === 0 && skip) {
+      setCurrentStep(6);
+    } else if (currentStep < 6) {
       setCurrentStep(currentStep + 1);
     }
   };
@@ -29,7 +31,15 @@ export default function Tutorial() {
       <div>
         <ProgressBar currentStep={currentStep} />
       </div>
-      {currentStep === 1 ? (
+      {currentStep === 0 ? (
+        <div className="flex-1 flex flex-col items-center justify-center text-center px-4">
+          <h1>Find the Best Deal!</h1>
+          <p>
+            Personalize your shopping experience! Answer a few questions, and
+            get the best deals and discounts for you!
+          </p>
+        </div>
+      ) : currentStep === 1 ? (
         <div className={styles.content}>
           <h2>Select all categories you often shop</h2>
           <div className={styles.chips}>
@@ -114,7 +124,7 @@ export default function Tutorial() {
             <OptionButton text="Depends on the event" onClick={() => {}} />
           </div>
         </div>
-      ) : (
+      ) : currentStep === 5 ? (
         <div className={styles.content}>
           <h2>Would you like to receive notifications for new deals?</h2>
           <div className="flex flex-col items-center">
@@ -130,11 +140,36 @@ export default function Tutorial() {
             />
           </div>
         </div>
+      ) : (
+        <div className="flex-1 flex flex-col items-center justify-center text-center px-4">
+          <h1>Successful!</h1>
+          <p>
+            Check out all the upcoming events and receive the notification of
+            the best deals!
+          </p>
+        </div>
       )}
+
       <div className={styles.nextButtonContainer}>
         <div className="max-w-[440px] mx-auto flex flex-col items-center gap-4">
-          <NextButton onClick={handleNext} />
-          {currentStep < 5 && <SkipButton onClick={handleNext} />}
+          {currentStep === 6 ? (
+            <>
+              <NextButton text="Try Tutorial" onClick={handleNext} />
+              <SkipButton onClick={handleNext} />
+            </>
+          ) : (
+            <>
+              {currentStep >= 0 && currentStep <= 5 && (
+                <NextButton onClick={handleNext} text="Next" />
+              )}
+              {currentStep === 6 && (
+                <NextButton onClick={handleNext} text="Try Tutorial" />
+              )}
+              {currentStep >= 0 && currentStep < 5 && (
+                <SkipButton onClick={() => handleNext(true)} />
+              )}
+            </>
+          )}
         </div>
       </div>
     </div>
