@@ -1,4 +1,4 @@
-import Header from '@/ui/header-component/header'
+// import Header from '@/ui/header-component/header'
 import EventCard from '@/ui/full-sized-event-card/full-sized-event-card'
 import style from '@/app/event/event.module.css'
 
@@ -12,19 +12,15 @@ const PopularEvents = () => {
 Thu, Apr 24, 2025 6:00 PM - Sun, Apr 27, 2025 5:00 PM "
       />
       <EventCard
-        image="/images/tulip.jpg"
-        title="Tulip Festival"
-        subtitle="100 varieties of Tulips in Abbotsford"
+        image="/"
+        title="This is Bananas! 20th Anniversary "
+        subtitle="Celebration Fundraiser"
       />
       <EventCard
-        image="/images/tulip.jpg"
-        title="Tulip Festival"
-        subtitle="100 varieties of Tulips in Abbotsford"
-      />
-      <EventCard
-        image="/images/tulip.jpg"
-        title="Tulip Festival"
-        subtitle="100 varieties of Tulips in Abbotsford"
+        image="/"
+        title="Pedalheads Swim Open House - Fremont"
+        subtitle="Pedalheads Swim | Fremont Village
+Fri, Apr 18, 2025 9:00 AM - 2:00 PM PDT"
       />
     </div>
   );
@@ -33,11 +29,11 @@ Thu, Apr 24, 2025 6:00 PM - Sun, Apr 27, 2025 5:00 PM "
 export default PopularEvents;
 
 
-const LocationHeader = () => {
-  return (
-    <div>
-      
-      <Header />
-    </div>
-  )
-}
+// const LocationHeader = () => {
+//   return (
+//     <div>
+
+//       <Header />
+//     </div>
+//   )
+// }
