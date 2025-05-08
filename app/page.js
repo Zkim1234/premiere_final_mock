@@ -3,6 +3,8 @@ import Image from "next/image";
 import { Lexend } from "next/font/google";
 import styles from "./page.module.css";
 import { useState } from "react";
+import NextButton from "@/ui/onboarding/buttons/next-button";
+import Input from "@/ui/onboarding/form/Input";
 
 const lexend = Lexend({ subsets: ["latin"] });
 
@@ -10,7 +12,9 @@ export default function Home() {
   //email, password, errors if there is no input
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
   const [errors, setErrors] = useState({});
+  const [showCreateAccount, setShowCreateAccount] = useState(false);
 
   const validateInputs = () => {
     const newErrors = {};
@@ -37,7 +41,7 @@ export default function Home() {
       } else {
         setErrors((prev) => ({ ...prev, email: "" }));
       }
-    } else {
+    } else if (type === "password") {
       setPassword(value);
       if (!value.trim()) {
         setErrors((prev) => ({
@@ -47,6 +51,8 @@ export default function Home() {
       } else {
         setErrors((prev) => ({ ...prev, password: "" }));
       }
+    } else if (type === "name") {
+      setName(value);
     }
   };
 
@@ -57,6 +63,14 @@ export default function Home() {
     }
   };
 
+  const handleCreateAccount = () => {
+    setShowCreateAccount(true);
+  };
+
+  const handleBackToLogin = () => {
+    setShowCreateAccount(false);
+  };
+
   return (
     <div className={styles.container}>
       <div
@@ -65,50 +79,101 @@ export default function Home() {
         Find Fun and Save More!
       </div>
 
-      {/* Login and create an account section */}
-      <div className={styles.loginSection}>
-        <div>
-          <h1 className={styles.welcomeText}>Welcome to the Premiere</h1>
+      {!showCreateAccount ? (
+        // Login section
+        <div className={styles.loginSection}>
+          <div>
+            <h1 className={styles.welcomeText}>Welcome to the Premiere</h1>
+          </div>
+          <form className={styles.form}>
+            <div className={styles.inputContainer}>
+              <Input
+                type="text"
+                placeholder="Enter your email"
+                value={email}
+                onChange={(e) => handleInputChange(e, "email")}
+              />
+              {errors.email && (
+                <span className={styles.errorText}>{errors.email}</span>
+              )}
+            </div>
+            <div className={styles.inputContainer}>
+              <Input
+                type="password"
+                placeholder="Enter your password"
+                value={password}
+                onChange={(e) => handleInputChange(e, "password")}
+              />
+              {errors.password && (
+                <span className={styles.errorText}>{errors.password}</span>
+              )}
+            </div>
+            <div className={styles.buttonContainer}>
+              <NextButton onClick={handleLogin} text="Login" />
+              <NextButton
+                onClick={handleCreateAccount}
+                text="Create an account"
+              />
+            </div>
+          </form>
         </div>
-        <form className={styles.form}>
-          <div className={styles.inputContainer}>
-            <input
-              type="text"
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => handleInputChange(e, "email")}
-              className={styles.input}
-            />
-            {errors.email && (
-              <span className={styles.errorText}>{errors.email}</span>
-            )}
+      ) : (
+        // Create account section
+        <div className={styles.loginSection}>
+          <div>
+            <h1 className={styles.welcomeText}>Create an Account</h1>
           </div>
-          <div className={styles.inputContainer}>
-            <input
-              type="password"
-              placeholder="Enter your password"
-              value={password}
-              onChange={(e) => handleInputChange(e, "password")}
-              className={styles.input}
-            />
-            {errors.password && (
-              <span className={styles.errorText}>{errors.password}</span>
-            )}
-          </div>
-          <div className={styles.buttonContainer}>
-            <button
-              type="button"
-              className={styles.button}
-              onClick={handleLogin}
-            >
-              Login
-            </button>
-            <button type="button" className={styles.button}>
-              Create an account
-            </button>
-          </div>
-        </form>
-      </div>
+          <form className={styles.form}>
+            <div className={styles.inputContainer}>
+              <Input
+                type="text"
+                placeholder="Enter your First Name (required)"
+                value={name}
+                onChange={(e) => handleInputChange(e, "name")}
+                
+              />
+              <Input
+                type="text"
+                placeholder="Enter your Last Name (required)"
+                value={name}
+                onChange={(e) => handleInputChange(e, "name")}
+              />
+            </div>
+            <div className={styles.inputContainer}>
+              <Input
+                type="text"
+                placeholder="Enter your email (required)"
+                value={email}
+                onChange={(e) => handleInputChange(e, "email")}
+              />
+              {errors.email && (
+                <span className={styles.errorText}>{errors.email}</span>
+              )}
+            </div>
+            <div className={styles.inputContainer}>
+              <Input
+                type="password"
+                placeholder="Enter your password (required)"
+                value={password}
+                onChange={(e) => handleInputChange(e, "password")}
+              />
+              {errors.password && (
+                <span className={styles.errorText}>{errors.password}</span>
+              )}
+              <Input
+                type="password"
+                placeholder="Confirm your password (required)"
+                value={password}
+                onChange={(e) => handleInputChange(e, "password")}
+              />
+            </div>
+            <div className={styles.buttonContainer}>
+              <NextButton text="Create Account" />
+              <button onClick={handleBackToLogin}>Back to Login</button>
+            </div>
+          </form>
+        </div>
+      )}
     </div>
   );
 }
