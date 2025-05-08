@@ -12,21 +12,73 @@ export default function Tutorial() {
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [currentStep, setCurrentStep] = useState(0);
   const [selectedNotification, setSelectedNotification] = useState("Yes");
+  const [isTutorial, setIsTutorial] = useState(false);
+  const [tutorialStep, setTutorialStep] = useState(0);
 
   const handleNext = (skip = false) => {
-    if (currentStep === 0 && skip) {
-      setCurrentStep(6);
-    } else if (currentStep < 6) {
+    if (currentStep === 6 && skip) {
+      setIsTutorial(true);
+      setTutorialStep(0);
+    } else if (currentStep < 5) {
       setCurrentStep(currentStep + 1);
+    } else if (currentStep === 5) {
+      setCurrentStep(6);
     }
+  };
+
+  const handleTutorialNext = () => {
+    if (tutorialStep < 2) {
+      setTutorialStep(tutorialStep + 1);
+    }
+  };
+
+  const handleStartTutorial = () => {
+    setIsTutorial(true);
+    setTutorialStep(0);
   };
 
   const handleNotificationSelect = (text) => {
     setSelectedNotification(text);
   };
 
+  if (isTutorial) {
+    return (
+      <div className={styles.container}>
+        {tutorialStep === 0 && (
+          <div className="flex-1 flex flex-col items-center justify-center text-center px-4">
+            <h1>Find your events and discounts</h1>
+            <p>Search for your next game plan and deals.</p>
+          </div>
+        )}
+        {tutorialStep === 1 && (
+          <div className="flex-1 flex flex-col items-center justify-center text-center px-4">
+            <h1>Save it and use anytime</h1>
+            <p>Save your events and discount in Premiere.</p>
+          </div>
+        )}
+        {tutorialStep === 2 && (
+          <div className="flex-1 flex flex-col items-center justify-center text-center px-4">
+            <h1>Stay on the loop and start saving!</h1>
+            <p>
+                We’ll keep you in touch for events and deals happening in Vancouver.
+            </p>
+          </div>
+        )}
+        <div className={styles.nextButtonContainer}>
+          <div className="max-w-[440px] mx-auto flex flex-col items-center gap-4">
+            {tutorialStep < 2 ? (
+              <NextButton onClick={handleTutorialNext} text="Next" />
+            ) : (
+              <NextButton onClick={() => setIsTutorial(false)} text="Finish" />
+            )}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div className={styles.container + " " + styles.personalizationOne}>
+    <div className={styles.container}>
       {/* Progress bar */}
       <div>
         <ProgressBar currentStep={currentStep} />
@@ -152,24 +204,13 @@ export default function Tutorial() {
 
       <div className={styles.nextButtonContainer}>
         <div className="max-w-[440px] mx-auto flex flex-col items-center gap-4">
-          {currentStep === 6 ? (
-            <>
-              <NextButton text="Try Tutorial" onClick={handleNext} />
-              <SkipButton onClick={handleNext} />
-            </>
-          ) : (
-            <>
-              {currentStep >= 0 && currentStep <= 5 && (
-                <NextButton onClick={handleNext} text="Next" />
-              )}
-              {currentStep === 6 && (
-                <NextButton onClick={handleNext} text="Try Tutorial" />
-              )}
-              {currentStep >= 0 && currentStep < 5 && (
-                <SkipButton onClick={() => handleNext(true)} />
-              )}
-            </>
+          {currentStep >= 0 && currentStep <= 5 && (
+            <NextButton onClick={handleNext} text="Next" />
           )}
+          {currentStep === 6 && (
+            <NextButton onClick={handleStartTutorial} text="Try Tutorial" />
+          )}
+          {currentStep === 1 && <SkipButton onClick={() => handleNext(true)} />}
         </div>
       </div>
     </div>
