@@ -70,7 +70,7 @@ export default function Tutorial() {
             {tutorialStep < 2 ? (
               <NextButton onClick={handleTutorialNext} text="Next" />
             ) : (
-              <NextButton onClick={() => setIsTutorial(false)} text="Finish" />
+              <NextButton  /*onClick={() => send this to home page}*/ text="Finish" />
             )}
           </div>
         </div>
@@ -211,7 +211,7 @@ export default function Tutorial() {
           {currentStep === 6 && (
             <NextButton onClick={handleStartTutorial} text="Try Tutorial" />
           )}
-          {currentStep === 1 && <SkipButton onClick={() => handleNext(true)} />}
+          {currentStep >= 1 && currentStep < 5 && <SkipButton onClick={() => handleNext(true)} />}
         </div>
       </div>
     </div>

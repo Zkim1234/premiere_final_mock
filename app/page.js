@@ -5,10 +5,12 @@ import styles from "./page.module.css";
 import { useState } from "react";
 import NextButton from "@/ui/onboarding/buttons/next-button";
 import Input from "@/ui/onboarding/form/Input";
+import { useRouter } from "next/navigation";
 
 const lexend = Lexend({ subsets: ["latin"] });
 
 export default function Home() {
+  const router = useRouter();
   //email, password, errors if there is no input
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -130,7 +132,6 @@ export default function Home() {
                 placeholder="Enter your First Name (required)"
                 value={name}
                 onChange={(e) => handleInputChange(e, "name")}
-                
               />
               <Input
                 type="text"
@@ -167,11 +168,11 @@ export default function Home() {
                 onChange={(e) => handleInputChange(e, "password")}
               />
             </div>
-            <div className={styles.buttonContainer}>
-              <NextButton text="Create Account" />
+          </form>
+          <div className={styles.buttonContainer}>
+              <button onClick={() => router.push("/tutorial")}>Create an account</button>
               <button onClick={handleBackToLogin}>Back to Login</button>
             </div>
-          </form>
         </div>
       )}
     </div>
