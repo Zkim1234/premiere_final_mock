@@ -1,0 +1,54 @@
+.reminderCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #EAECF1;
+  border-radius: 24px;
+  padding: 16px 28px;
+  min-width: 290px;
+  max-width: 340px;
+  box-shadow: none;
+  font-family: inherit;
+}
+
+.iconRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.bellIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reminderText {
+  font-weight: 600;
+  font-size: 20px;
+  color: #212325;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.arrowIcon {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.surveyText {
+  color: #212325;
+  font-size: 15px;
+  font-weight: 400;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.surveyLink {
+  color: #0071e3;
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: 500;
+}
