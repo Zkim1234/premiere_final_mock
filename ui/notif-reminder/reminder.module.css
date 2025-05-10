@@ -1,50 +1,59 @@
 .reminderCard {
-  display: flex;
-  flex-direction: column;
-  background: #eaecf1;
+  background-color: #eaecf1;
   border-radius: 30px;
-  padding: 12px 28px;
-  width: 293px;
+  padding: 10px 13px;
+  width: 290px;
   height: 83px;
-  box-shadow: none;
-  margin: auto;
+  margin: 0 auto;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.reminderCard:hover {
+  background-color: #d5dced;
+}
+
+.reminderCard:active {
+  background-color: #e7edff;
+}
+
+.reminderContent {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .iconRow {
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin-bottom: 8px;
 }
-
 .bellIcon {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 24px;
+  height: 24px;
 }
 
 .reminderText {
+  font-size: 16px;
   font-weight: 600;
-  font-size: 20px;
   color: #212325;
-  margin-left: 4px;
-  margin-right: 4px;
 }
 
 .arrowIcon {
   display: flex;
   align-items: center;
-  margin-left: auto;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  margin-left: 10px;
 }
 
 .surveyText {
+  font-size: 14px;
   color: #212325;
-  font-size: 15px;
-  font-weight: 400;
-
-  margin-bottom: 2px;
-}
-
-.surveyLink {
-  font-weight: 500;
+  line-height: 1;
 }
