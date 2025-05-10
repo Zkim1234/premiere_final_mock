@@ -6,6 +6,7 @@ import { useState } from "react";
 import NextButton from "@/ui/onboarding/buttons/next-button";
 import Input from "@/ui/onboarding/form/Input";
 import { useRouter } from "next/navigation";
+import SmallWhiteButton from "@/ui/onboarding/buttons/Small-white-button";
 
 const lexend = Lexend({ subsets: ["latin"] });
 
@@ -60,7 +61,6 @@ export default function Home() {
 
   const handleLogin = () => {
     if (validateInputs()) {
-      // Handle login logic here
       console.log("Login successful");
       //router.push("/home");
     }
@@ -76,16 +76,18 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
-      <div
-        className={`${lexend.className} ${styles.mainText} ${styles.fadeInOut}`}
-      >
-        Find Fun and Save More!
-      </div>
-
       {!showCreateAccount ? (
         // Login section
         <div className={styles.loginSection}>
-          <div>
+          <div className="flex flex-col items-center gap-5">
+            <Image
+              src="/logos/large-logo.svg"
+              alt="logo"
+              width={90}
+              height={90}
+              margin={10}
+              className="w-full h-full object-contain"
+            />
             <h1 className={styles.welcomeText}>Welcome to the Premiere</h1>
           </div>
           <form className={styles.form}>
@@ -113,30 +115,38 @@ export default function Home() {
             </div>
           </form>
           <div className={styles.buttonContainer}>
-              <NextButton onClick={handleLogin} text="Login" />
-              <NextButton
-                onClick={handleCreateAccount}
-                text="Create an account"
-              />
-            </div>
+            <NextButton onClick={handleLogin} text="Login" />
+            <NextButton
+              onClick={handleCreateAccount}
+              text="Create an account"
+            />
+          </div>
         </div>
       ) : (
         // Create account section
         <div className={styles.loginSection}>
-          <div>
+          <div className="flex flex-col items-center gap-5">
+            <Image
+              src="/logos/medium-logo.svg"
+              alt="logo"
+              width={100}
+              height={100}
+              margin={10}
+              className="w-full h-full object-contain"
+            />
             <h1 className={styles.welcomeText}>Create an Account</h1>
           </div>
           <form className={styles.form}>
             <div className={styles.inputContainer}>
               <Input
                 type="text"
-                placeholder="Enter your First Name (required)"
+                placeholder="First Name (required)"
                 value={name}
                 onChange={(e) => handleInputChange(e, "name")}
               />
               <Input
                 type="text"
-                placeholder="Enter your Last Name (required)"
+                placeholder="Last Name (required)"
                 value={name}
                 onChange={(e) => handleInputChange(e, "name")}
               />
@@ -144,7 +154,7 @@ export default function Home() {
             <div className={styles.inputContainer}>
               <Input
                 type="text"
-                placeholder="Enter your email (required)"
+                placeholder="Email (required)"
                 value={email}
                 onChange={(e) => handleInputChange(e, "email")}
               />
@@ -171,9 +181,12 @@ export default function Home() {
             </div>
           </form>
           <div className={styles.buttonContainer}>
-              <NextButton text="Create an account" onClick={() => router.push("/tutorial")}/>
-              <NextButton text="Back to Login" onClick={handleBackToLogin}/>
-            </div>
+            <NextButton
+              text="Create an account"
+              onClick={() => router.push("/tutorial")}
+            />
+            <SmallWhiteButton text="Back to Login" onClick={handleBackToLogin} />
+          </div>
         </div>
       )}
     </div>

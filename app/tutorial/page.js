@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 import SimpleChip from "@/ui/onboarding/buttons/Simple-chip";
 import NextButton from "@/ui/onboarding/buttons/next-button";
 import SkipButton from "@/ui/onboarding/buttons/Skip-button";
@@ -49,61 +50,116 @@ export default function Tutorial() {
     setSelectedNotification(text);
   };
 
+  // Tutorial button
+  const tutorialButton = () => {
+    return (
+      <div className={styles.nextButtonContainer}>
+        <div className="max-w-[440px] mx-auto flex flex-col items-center gap-4">
+          {tutorialStep < 2 ? (
+            <div className="flex flex-row w-full">
+              {tutorialStep === 1 ? (
+                <div className="flex flex-row justify-between w-full">
+                  <SmallWhiteButton onClick={handleBackTutorial} text="Back" />
+                  <SmallBlueButton onClick={handleTutorialNext} text="Next" />
+                </div>
+              ) : (
+                <div className="flex flex-row justify-end w-full">
+                  <SmallBlueButton onClick={handleTutorialNext} text="Next" />
+                </div>
+              )}
+            </div>
+          ) : (
+            <div className="flex flex-row justify-between w-full">
+              <SmallWhiteButton onClick={handleBackTutorial} text="Back" />
+              <SmallBlueButton
+                /*onClick={() => router.push("/home")}*/ text="Done"
+              />
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  };
+
+  // Tutorials
   if (isTutorial) {
     return (
-      <div className={styles.container}>
+      <div
+        className={`${styles.container} ${
+          tutorialStep === 0
+            ? "bg-[#556A8D]"
+            : tutorialStep === 1
+            ? "bg-[#CBEEC5]"
+            : "bg-[#5D94AA]"
+        }`}
+      >
+        {tutorialStep < 2 && (
+          <button //skip button
+            onClick={() => setTutorialStep(2)}
+            className="absolute top-4 right-6 text-white font-medium underline text-[20px]"
+          >
+            Skip
+          </button>
+        )}
         {tutorialStep === 0 && (
-          <div className="flex-1 flex flex-col items-center justify-center text-center px-4">
-            <h2>Step 1: Find your events and discounts</h2>
-            <p>Search for your next game plan and deals.</p>
+          <div className={styles.tutorialContainer}>
+            <Image
+              src="/onboarding/tutorial00.svg"
+              alt="Find events and discounts"
+              width={100}
+              height={100}
+              className={styles.tutorialImage}
+              priority
+            />
+            <div className={styles.tutorialInstruction}>
+              <h2>Step 1: Find your events and discounts</h2>
+              <p>Search for your next game plan and deals.</p>
+              {tutorialButton()}
+            </div>
           </div>
         )}
         {tutorialStep === 1 && (
-          <div className="flex-1 flex flex-col items-center justify-center text-center px-4">
-            <h2>Step 2: Save it and use anytime</h2>
-            <p>Save your events and discount in Premiere.</p>
+          <div className={styles.tutorialContainer}>
+            <Image
+              src="/onboarding/tutorial01.svg"
+              alt="Save events and discounts"
+              width={100}
+              height={100}
+              className={styles.tutorialImage}
+              priority
+            />
+            <div className={styles.tutorialInstruction}>
+              <h2>Step 2: Save it and use anytime</h2>
+              <p>Save your events and discount in Premiere.</p>
+              {tutorialButton()}
+            </div>
           </div>
         )}
         {tutorialStep === 2 && (
-          <div className="flex-1 flex flex-col items-center justify-center text-center px-4">
-            <h2>Step 3: Stay on the loop and start saving!</h2>
-            <p>
-              We'll keep you in touch for events and deals happening in
-              Vancouver.
-            </p>
+          <div className={styles.tutorialContainer}>
+            <Image
+              src="/onboarding/tutorial02.svg"
+              alt="Receive notifications"
+              width={100}
+              height={100}
+              className={styles.tutorialImage}
+              priority
+            />
+            <div className={styles.tutorialInstruction}>
+              <h2>Step 3: Stay on the loop and start saving!</h2>
+              <p>
+                We'll keep you in touch for events and deals happening in
+                Vancouver.
+              </p>
+              {tutorialButton()}
+            </div>
           </div>
         )}
-        <div className={styles.nextButtonContainer}>
-          <div className="max-w-[440px] mx-auto flex flex-col items-center gap-4">
-            {tutorialStep < 2 ? (
-              <div className="flex flex-row w-full">
-                {tutorialStep === 1 ? (
-                  <div className="flex flex-row justify-between w-full">
-                    <SmallWhiteButton
-                      onClick={handleBackTutorial}
-                      text="Back"
-                    />
-                    <SmallBlueButton onClick={handleTutorialNext} text="Next" />
-                  </div>
-                ) : (
-                  <div className="flex flex-row justify-end w-full">
-                    <SmallBlueButton onClick={handleTutorialNext} text="Next" />
-                  </div>
-                )}
-              </div>
-            ) : (
-              <div className="flex flex-row justify-end w-full">
-                <SmallBlueButton
-                  /*onClick={() => send this to home page}*/ text="Done"
-                />
-              </div>
-            )}
-          </div>
-        </div>
       </div>
     );
   }
 
+  // Main page
   return (
     <div className={styles.container}>
       {/* Progress bar */}

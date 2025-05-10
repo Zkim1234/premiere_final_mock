@@ -16,8 +16,6 @@
 }
 
 .loginSection {
-  animation: fadeIn 1s ease-in-out 2s forwards;
-  opacity: 0;
   width: 100%;
   max-width: 400px;
   display: flex;
