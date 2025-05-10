@@ -3,6 +3,7 @@ import React from "react";
 import NotificationCard from "@/ui/notification-component/new-notif";
 import styles from "@/app/notifications/notifications.module.css";
 import ReminderNotif from "@/ui/notif-reminder/reminder";
+import NavBar from "@/ui/nav-bar/nav-bar";
 
 export default function Notifications() {
   const handleReminderClick = () => {
@@ -28,7 +29,7 @@ export default function Notifications() {
           <NotificationCard
             image="images\richmond_night_market.jpg"
             alt="Richmond Night Market"
-            name="Upcoming Event: Richmond Nigh..."
+            name="Upcoming Event: Richmond Night Market"
             tag="NEW!"
             text="You have an Upcoming event on May 29, 2025 for the Richmond night market"
           />
@@ -66,6 +67,9 @@ export default function Notifications() {
             text="Treat yourself to something sweet and delicious at Blenz Coffee! Enjoy 10% off all pastries."
           />
         </div>
+      </div>
+      <div className={styles.navBar}>
+        <NavBar />
       </div>
     </div>
   );

@@ -7,6 +7,8 @@
 }
 .notificationTitle {
   color: black;
+  margin-left: 20px;
+  font-size: 1.9375rem;
 }
 
 .notificationContainer {
