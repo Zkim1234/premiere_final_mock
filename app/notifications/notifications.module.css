@@ -1,3 +1,14 @@
-html {
-  font-family: inherit;
+.pageContainer {
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.notificationTitle {
+  color: black;
+}
+
+.notificationContainer {
+  background-color: white;
 }
