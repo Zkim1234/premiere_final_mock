@@ -278,10 +278,14 @@ export default function Tutorial() {
       ) : (
         <div className="flex-1 flex flex-col items-center justify-center text-center px-4">
           <h1>Successful!</h1>
-          <p>
+          <p className="mb-10">
             Check out all the upcoming events and receive the notification of
             the best deals!
           </p>
+          <SmallWhiteButton
+            text="Go Home"
+            onClick={() => router.push("/home")}
+          />
         </div>
       )}
 
