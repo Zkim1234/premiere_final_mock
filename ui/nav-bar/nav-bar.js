@@ -6,3 +6,4 @@ export default function NavBar() {
     <div className={styles.navContainer}>
 
     </div> )
+}
