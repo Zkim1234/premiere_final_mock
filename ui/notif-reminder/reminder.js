@@ -7,22 +7,7 @@ export default function ReminderNotif({ onClick }) {
       <div className={styles.reminderContent}>
         <div className={styles.iconRow}>
           <span className={styles.bellIcon}>
-            {/* Bell SVG */}
-            <svg
-              width="23"
-              height="25"
-              viewBox="0 0 23 25"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M14.0436 17.6628V18.6639C14.0436 20.3226 12.8082 21.6672 11.2842 21.6672C9.76024 21.6672 8.52481 20.3226 8.52481 18.6639V17.6628M14.0436 17.6628H8.52481M14.0436 17.6628H17.3462C17.6981 17.6628 17.8748 17.6628 18.0173 17.6105C18.2894 17.5106 18.5024 17.278 18.5942 16.9818C18.6424 16.8262 18.6424 16.6332 18.6424 16.2472C18.6424 16.0783 18.6422 15.9939 18.6301 15.9133C18.6072 15.7612 18.5529 15.6169 18.4703 15.4916C18.4266 15.4255 18.3711 15.3651 18.2617 15.246L17.9034 14.856C17.7878 14.7302 17.7229 14.5595 17.7229 14.3816V10.6551C17.7229 6.7849 14.8402 3.64745 11.2842 3.64746C7.72827 3.64747 4.84559 6.78491 4.84559 10.6551V14.3816C4.84559 14.5596 4.78051 14.7302 4.66491 14.856L4.30664 15.246C4.1969 15.3654 4.14197 15.4254 4.09824 15.4917C4.01561 15.6169 3.96087 15.7612 3.93792 15.9133C3.92578 15.9939 3.92578 16.0783 3.92578 16.2472C3.92578 16.6332 3.92578 16.8261 3.97403 16.9818C4.06582 17.278 4.27972 17.5106 4.55186 17.6105C4.69433 17.6628 4.87044 17.6628 5.2223 17.6628H8.52481"
-                stroke="#212325"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+            <img src="/Bell.svg" alt="Reminder" width={23} height={25} />
           </span>
           <span className={styles.reminderText}>Reminder</span>
         </div>
@@ -32,29 +17,7 @@ export default function ReminderNotif({ onClick }) {
         </div>
       </div>
       <span className={styles.arrowIcon}>
-        {/* Arrow SVG */}
-        <svg
-          width="10"
-          height="20"
-          viewBox="0 0 10 20"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect
-            width="11.5907"
-            height="2.94137"
-            rx="1.47069"
-            transform="matrix(-0.570439 -0.82134 0.754839 -0.65591 7.54297 12.3047)"
-            fill="#212325"
-          />
-          <rect
-            width="11.5907"
-            height="2.94137"
-            rx="1.47069"
-            transform="matrix(-0.570439 0.82134 0.754839 0.65591 7.74219 7.97168)"
-            fill="#212325"
-          />
-        </svg>
+        <img src="/Arrow_down.svg" alt="Arrow" width={10} height={20} />
       </span>
     </button>
   );
