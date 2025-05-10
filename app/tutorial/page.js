@@ -7,6 +7,8 @@ import styles from "@/app/tutorial/page.module.css";
 import ProgressBar from "@/ui/onboarding/progress-bar/progress-bar";
 import OptionButton from "@/ui/onboarding/buttons/Option-button";
 import YesNoButton from "@/ui/onboarding/buttons/Yes-No-button";
+import SmallBlueButton from "@/ui/onboarding/buttons/Small-blue-button";
+import SmallWhiteButton from "@/ui/onboarding/buttons/Small-white-button";
 
 export default function Tutorial() {
   const [selectedCategories, setSelectedCategories] = useState([]);
@@ -37,6 +39,12 @@ export default function Tutorial() {
     setTutorialStep(0);
   };
 
+  const handleBackTutorial = () => {
+    if (tutorialStep > 0) {
+      setTutorialStep(tutorialStep - 1);
+    }
+  };
+
   const handleNotificationSelect = (text) => {
     setSelectedNotification(text);
   };
@@ -60,7 +68,7 @@ export default function Tutorial() {
           <div className="flex-1 flex flex-col items-center justify-center text-center px-4">
             <h2>Step 3: Stay on the loop and start saving!</h2>
             <p>
-              We’ll keep you in touch for events and deals happening in
+              We'll keep you in touch for events and deals happening in
               Vancouver.
             </p>
           </div>
@@ -68,9 +76,27 @@ export default function Tutorial() {
         <div className={styles.nextButtonContainer}>
           <div className="max-w-[440px] mx-auto flex flex-col items-center gap-4">
             {tutorialStep < 2 ? (
-              <NextButton onClick={handleTutorialNext} text="Next" />
+              <div className="flex flex-row w-full">
+                {tutorialStep === 1 ? (
+                  <div className="flex flex-row justify-between w-full">
+                    <SmallWhiteButton
+                      onClick={handleBackTutorial}
+                      text="Back"
+                    />
+                    <SmallBlueButton onClick={handleTutorialNext} text="Next" />
+                  </div>
+                ) : (
+                  <div className="flex flex-row justify-end w-full">
+                    <SmallBlueButton onClick={handleTutorialNext} text="Next" />
+                  </div>
+                )}
+              </div>
             ) : (
-              <NextButton  /*onClick={() => send this to home page}*/ text="Finish" />
+              <div className="flex flex-row justify-end w-full">
+                <SmallBlueButton
+                  /*onClick={() => send this to home page}*/ text="Done"
+                />
+              </div>
             )}
           </div>
         </div>
@@ -211,7 +237,9 @@ export default function Tutorial() {
           {currentStep === 6 && (
             <NextButton onClick={handleStartTutorial} text="Try Tutorial" />
           )}
-          {currentStep >= 1 && currentStep < 5 && <SkipButton onClick={() => handleNext(true)} />}
+          {currentStep >= 1 && currentStep < 5 && (
+            <SkipButton onClick={() => handleNext(true)} />
+          )}
         </div>
       </div>
     </div>

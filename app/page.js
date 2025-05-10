@@ -62,6 +62,7 @@ export default function Home() {
     if (validateInputs()) {
       // Handle login logic here
       console.log("Login successful");
+      //router.push("/home");
     }
   };
 
@@ -110,14 +111,14 @@ export default function Home() {
                 <span className={styles.errorText}>{errors.password}</span>
               )}
             </div>
-            <div className={styles.buttonContainer}>
+          </form>
+          <div className={styles.buttonContainer}>
               <NextButton onClick={handleLogin} text="Login" />
               <NextButton
                 onClick={handleCreateAccount}
                 text="Create an account"
               />
             </div>
-          </form>
         </div>
       ) : (
         // Create account section
@@ -170,8 +171,8 @@ export default function Home() {
             </div>
           </form>
           <div className={styles.buttonContainer}>
-              <button onClick={() => router.push("/tutorial")}>Create an account</button>
-              <button onClick={handleBackToLogin}>Back to Login</button>
+              <NextButton text="Create an account" onClick={() => router.push("/tutorial")}/>
+              <NextButton text="Back to Login" onClick={handleBackToLogin}/>
             </div>
         </div>
       )}
