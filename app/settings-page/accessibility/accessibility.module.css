@@ -1,0 +1,17 @@
+.pageContainer{
+    background-color: white;
+    width: 440px;
+    height: 900px;
+}
+.accessibilityTitle{
+    color: #000;
+    margin: 0;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.darkModeContainer{
+    margin: 0;
+    padding-left: 20px
+}
+

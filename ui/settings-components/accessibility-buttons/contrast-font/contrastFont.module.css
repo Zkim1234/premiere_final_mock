@@ -1,0 +1,52 @@
+
+
+.contrastContainer .fontContainer {
+  min-width: 401px;
+  height: 77px;
+  background: #e4e4e4;
+  border-radius: 8px;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.iconBtn {
+  cursor: pointer;
+  margin: auto;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.count {
+  font-size: 1.25rem;
+  color: #212325;
+  min-width: 50px;
+  text-align: center;
+  background-color: #8A8A8A;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+
+
+.resetBtn {
+  width: 100%;
+  background: #a0a0a0;
+  color: #222;
+  font-size: 1.25rem;
+  cursor: pointer;
+  border-radius: 0 0 8px 8px;
+  padding: 5px;
+}

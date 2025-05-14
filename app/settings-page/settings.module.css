@@ -1,23 +1,33 @@
 .pageContainer {
   background-color: white;
-  min-width: 440px;
-  min-height: 956px;
+  width: 440px;
+  height: 900px;
 }
 .settingsTitle {
   font-size: 1.9375rem;
   color: black;
   align-items: left;
-  margin-bottom: 10px;
-  margin-left: 20px;
-  margin-top: 20px;
+  padding: 20px 20px 10px 20px;
 }
 .settingsContainer {
   background: white;
 }
 .deleteAccount {
   font-size: 1.25rem;
-  color: #FF4040;
+  color: #ff4040;
   align-items: left;
   margin-left: 30px;
 }
 
+.nextButtonContainer {
+  position: fixed;
+  bottom: 80px; 
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 440px;
+  display: flex;
+  justify-content: center;
+  z-index: 100;
+  padding: 15px 0;
+}

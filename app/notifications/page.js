@@ -1,18 +1,20 @@
 "use client";
 import React from "react";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 import NotificationCard from "@/ui/notification-component/new-notif";
 import styles from "@/app/notifications/notifications.module.css";
 import ReminderNotif from "@/ui/notif-reminder/reminder";
 import NavBar from "@/ui/nav-bar/nav-bar";
-
 export default function Notifications() {
-  const handleReminderClick = () => {
-    alert("Reminder button clicked!");
-  };
+  const router = useRouter();
+ 
   return (
     <div className={styles.pageContainer}>
-      <div className={styles.reminderButton}>
-        <ReminderNotif onClick={handleReminderClick} />
+      <div
+        className={styles.reminderButton}
+      >
+        <ReminderNotif onClick={() => router.push("/tutorial")}/>
       </div>
       <div className={styles.notificationContainer}>
         <h1 className={styles.notificationTitle}>Notifications</h1>
