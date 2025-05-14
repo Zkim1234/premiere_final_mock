@@ -6,7 +6,7 @@ const PopularEvents = () => {
   return (
     <div className={style.container}>
       <EventCard
-        image="art_vancouver.js"
+        image="/images/art_vancouver.jpg"
         title="Art Vancouver 2025"
         subtitle="Vancouver Convention Centre East
 Thu, Apr 24, 2025 6:00 PM - Sun, Apr 27, 2025 5:00 PM "

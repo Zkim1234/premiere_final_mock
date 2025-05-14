@@ -1,5 +1,5 @@
 import styles from '@/ui/full-sized-event-card/full-sized-event-card.module.css'
-
+import Image from 'next/image';
 const EventCard = ({ image, title, subtitle }) => {
   return (
     <div className={styles.card}>
