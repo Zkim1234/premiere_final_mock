@@ -8,13 +8,11 @@ import ReminderNotif from "@/ui/notif-reminder/reminder";
 import NavBar from "@/ui/nav-bar/nav-bar";
 export default function Notifications() {
   const router = useRouter();
- 
+
   return (
     <div className={styles.pageContainer}>
-      <div
-        className={styles.reminderButton}
-      >
-        <ReminderNotif onClick={() => router.push("/tutorial")}/>
+      <div className={styles.reminderButton}>
+        <ReminderNotif onClick={() => router.push("/tutorial")} />
       </div>
       <div className={styles.notificationContainer}>
         <h1 className={styles.notificationTitle}>Notifications</h1>
