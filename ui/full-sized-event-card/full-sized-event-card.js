@@ -4,12 +4,6 @@ import Image from 'next/image';
 export default function EventCard({ image, title, subtitle, highlight }) {
   return (
     <div className={`${styles.card} ${highlight ? styles.highlight : ''}`}>
-      <div className={styles.sectionHeader}>
-        <h4>Happening This Month</h4>
-      </div>
-      <div className={styles.subsection}>
-        <h5>Don't miss out!</h5>
-      </div>
       <div className={styles.imageWrapper}>
         <Image
           src={image}
@@ -24,7 +18,7 @@ export default function EventCard({ image, title, subtitle, highlight }) {
           <p className={styles.subtitle}>{subtitle}</p>
         </div>
         <Image
-          src="/images/bookmark.svg"
+          src="/bookmarks/unsaved-bookmark.svg"
           width={24}
           height={24}
           alt="bookmark"

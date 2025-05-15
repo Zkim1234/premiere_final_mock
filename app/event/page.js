@@ -50,23 +50,30 @@ export function CarouselComponent() {
 
 export function PopularEvents() {
   return (
-    
-    <div className={style.container}>
-      <EventCard
-        image="/images/art_vancouver.jpg"
-        title="Art Vancouver 2025"
-        subtitle={`Vancouver Convention Centre East\nThu, Apr 24, 2025 6:00 PM - Sun, Apr 27, 2025 5:00 PM`}
-      />
-      <EventCard
-        image="/images/banana_banner.png"
-        title="This is Bananas! 20th Anniversary Celebration Fundraiser"
-        subtitle="dtcenshouse.ca"
-      />
-      <EventCard
-        image="/images/swimming_banner.png"
-        title="Pedalheads Swim Open House - Fremont"
-        subtitle={`Pedalheads Swim | Fremont Village\nFri, Apr 18, 2025 9:00 AM - 2:00 PM PDT`}
-      />
+    <div className={style.wrapper}>
+      <div className={style.sectionHeader}>
+        <h3 className={style.sectionTitle}>Happening this month</h3>
+        <h5 className={style.subsectionTitle}>Don't miss out!</h5>
+      </div>
+
+      <div className={style.container}>
+        <EventCard
+          image="/images/art_vancouver.jpg"
+          title="Art Vancouver 2025"
+          subtitle={`Vancouver Convention Centre East\nThu, Apr 24, 2025 6:00 PM - Sun, Apr 27, 2025 5:00 PM`}
+        />
+        <EventCard
+          image="/images/banana_banner.png"
+          title="This is Bananas! 20th Anniversary Celebration Fundraiser"
+          subtitle="dtcenshouse.ca"
+        />
+        <EventCard
+          image="/images/swimming_banner.png"
+          title="Pedalheads Swim Open House - Fremont"
+          subtitle={`Pedalheads Swim | Fremont Village\nFri, Apr 18, 2025 9:00 AM - 2:00 PM PDT`}
+        />
+      </div>
     </div>
   );
 }
+

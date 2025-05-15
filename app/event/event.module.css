@@ -9,7 +9,7 @@
   
   .carouselWrapper {
     overflow-x: auto;
-    padding: 0 16px;
+    padding: 0 20px;
   }
   
   .carouselScroll {
@@ -26,3 +26,11 @@
     scroll-snap-align: start;
   }
   
+  .carouselHeader {
+    padding-bottom: 10px;
+  }
+
+  .sectionHeader {
+    padding-top: 40px;
+    padding-left: 15px;
+  }
