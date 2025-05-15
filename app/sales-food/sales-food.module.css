@@ -1,0 +1,51 @@
+.pageContainer{
+    width: 440px;
+    height: 1000px;
+    background-color: white;
+    margin: 0;
+}
+
+.accessibilityTitle{
+    color: #2d4063;
+    margin: 0 auto;
+    padding: 30px 10px;
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+.headerRow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: #FAFAFA;
+}
+
+.headerRow img {
+    cursor: pointer;
+    position: absolute;
+    left: 16px;
+    transform: rotate(180deg);
+    filter: brightness(0);
+    transition: filter 0.3s ease;
+}
+
+.filterButton {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: #212325;
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0 8px;
+  gap: 12px;
+  margin-right: 20px;
+  margin-top: 16px;
+
+}
+
+.chevron {
+  width: 8px;
+  transform: rotate(90deg);
+}

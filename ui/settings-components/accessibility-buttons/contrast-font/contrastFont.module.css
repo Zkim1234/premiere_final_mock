@@ -1,0 +1,77 @@
+.contrastContainer, .fontContainer {
+  width: 401px;
+  height: 100px;
+  background: #e4e4e4;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 18px auto;
+  transition: background-color 0.3s ease;
+}
+
+:global(.dark-mode) .contrastContainer,
+:global(.dark-mode) .fontContainer {
+  background: #212325;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.iconBtn {
+  cursor: pointer;
+  margin: auto;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.count {
+  font-size: 1.15rem;
+  color: #212325;
+  min-width: 38px;
+  text-align: center;
+  background-color: #8A8A8A;
+  border-radius: 100%;
+  padding: 5px;
+  transition: all 0.3s ease;
+}
+
+:global(.dark-mode) .count {
+  color: #ffffff;
+}
+
+.resetBtn {
+  width: 100%;
+  background: #a0a0a0;
+  color: #222;
+  font-size: 1.25rem;
+  cursor: pointer;
+  border-radius: 0 0 8px 8px;
+  padding: 5px;
+  transition: all 0.3s ease;
+}
+
+:global(.dark-mode) .resetBtn {
+  background: #4D4F51;
+  color: #ffffff;
+}
+
+.subtitles {
+  margin: 20px 0px -20px 20px;
+  color: #212325;
+  font-size: 1.25rem;
+  transition: color 0.3s ease;
+}
+
+:global(.dark-mode) .subtitles {
+  color: #ffffff;
+}

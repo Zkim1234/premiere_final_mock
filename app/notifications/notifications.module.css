@@ -1,0 +1,18 @@
+.pageContainer {
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.notificationTitle {
+  color: black;
+  margin-left: 20px;
+  margin-top: 10px;
+  font-size: 1.9375rem;
+}
+
+.notificationContainer {
+  background-color: white;
+  margin-bottom: 80px;
+}

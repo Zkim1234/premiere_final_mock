@@ -1,0 +1,33 @@
+.pageContainer {
+  background-color: white;
+  width: 440px;
+  height: 800px;
+}
+.settingsTitle {
+  font-size: 1.9375rem;
+  color: black;
+  align-items: left;
+  padding: 20px 20px 10px 20px;
+}
+.settingsContainer {
+  background: white;
+}
+.deleteAccount {
+  font-size: 1.25rem;
+  color: #ff4040;
+  align-items: left;
+  margin-left: 30px;
+}
+
+.logOutButtonContainer {
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 440px;
+  display: flex;
+  justify-content: center;
+  z-index: 100;
+  padding: 15px 0;
+}

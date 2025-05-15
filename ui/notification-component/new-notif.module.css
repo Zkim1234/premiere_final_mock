@@ -1,0 +1,51 @@
+.notificationCardNew {
+  background-color: #eaecf1; /* Light gray for "NEW!" cards */
+  padding: 15px 25px 20px 10px;
+  width: 440px;
+  height: 133px;
+  margin: 0.5% 0;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.notificationCardDefault {
+  background-color: #f8f7f5; /* Default background color for other cards */
+  padding: 15px 25px 20px 10px;
+  width: 440px;
+  height: 133px;
+  margin: 0.5% 0;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.notificationHeader {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.brandName {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #222;
+  line-height: 1.3;
+}
+
+.newTag {
+  color: #17506b;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.notificationText {
+  font-size: 0.8125rem;
+  color: #222;
+  padding-left: 10px;
+}
+
+.notificationImage {
+  display: block;
+}
