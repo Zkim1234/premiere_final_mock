@@ -1,0 +1,69 @@
+"use client";
+import React from "react";
+import SalesCard from "@/ui/sales-card/sales";
+import styles from "@/app/sales-food/sales-food.module.css";
+import NavBar from "@/ui/nav-bar/nav-bar";
+
+export default function SalesFood() {
+    return (
+        <div className={styles.pageContainer}>
+            <div className={styles.headerRow}>
+        <img src="/Arrow_down.svg" alt="back" onClick={() => router.back()}/>
+        <h1 className={styles.accessibilityTitle}>All Food</h1>
+      </div>
+      <div className={styles.filterButton}>
+        <p>Filter</p>
+      <img src="/Arrow_down.svg" alt="filter" className={styles.chevron}/>
+      </div>
+            <div className={styles.salesCardContainer}>
+                <SalesCard
+                image="images/Dominos.png"
+                alt="Domino's Pizza Logo"
+                brandName="Dominos"
+                text="Get a FREE pizza when you buy one at regular price!"
+                offer="BOGO"
+                />
+            </div>
+            <div className={styles.salesCardContainer}>
+                <SalesCard
+                image="images\Popeyes-Logo.png"
+                alt="Popeyes logo"
+                brandName="Popeyes"
+                text="For a limited time only, get 20% off Popeyes wings."
+                offer="20% Off"
+                />
+            </div>
+            <div className={styles.salesCardContainer}>
+                <SalesCard
+                image="images\Tim_Hortons-Logo.wine.png"
+                alt="Tim hortons Logo"
+                brandName="Tim Hortons"
+                text="Get 20% off on all Craveables at Tim Hortons!"
+                offer="20% Off"
+                />
+            </div>
+            <div className={styles.salesCardContainer}>
+                <SalesCard
+                image="images\Logo-Freshslice-Pizza.jpg"
+                alt="Freshslice Pizza Logo"
+                brandName="Freshslice Pizza"
+                text="Buy a medium size pizza, Get the second one for free!"
+                offer="BOGO"
+                />
+            </div>
+            <div className={styles.salesCardContainer}>
+                <SalesCard
+                image="images\blenz.jpg"
+                alt="Blenz Coffee Logo"
+                brandName="Blenz Coffee"
+                text="Enjoy 10% off all pastries at Blenz Coffee"
+                offer="10% Off"
+                />
+            </div>
+            <div className={styles.navBar}>
+                <NavBar />
+            </div>
+        </div>
+        
+    );
+}

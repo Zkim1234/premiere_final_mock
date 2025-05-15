@@ -1,32 +1,32 @@
 import React from 'react';
-import './sales.css';
+import styles from './sales.module.css';
 
-const SalesCard = () => {
+export default function SalesCard ({image, alt, brandName, text, offer}){
   return (
-    <div className="sales-card">
-      <div className="sales-card-content">
-        <div className="logo-section">
+    <div className={styles.salesCard}>
+      <div className={styles.bookmarkIcon}>
+        <img src="/unsaved_Icon.svg" alt="bookmark"/>
+      </div>
+      <div className={styles.salesCardContent}>
+        <div className={styles.logoSection}>
           <img 
-            src="/dominos-logo.svg" 
-            alt="Domino's Pizza Logo" 
-            className="dominos-logo"
+            src={image}
+            alt={alt}
+            className={styles.logo}
           />
         </div>
-        <div className="offer-section">
-          <h2 className="brand-name">Dominos</h2>
-          <p className="offer-text">
-            Get a FREE pizza when you buy one at regular price!
-          </p>
+        <div className={styles.offerSection}>
+          <h2 className={styles.brandName}>{brandName}</h2>
+          <p className={styles.offerText}>{text}</p>
         </div>
       </div>
-      <div className="actions-section">
-        <button className="bogo-button">BOGO</button>
-        <button className="more-options-button">
-          <span className="dots">•••</span>
+      <div className={styles.actionsSection}>
+        <button className={styles.moreOptionsButton}>
+          <span className={styles.dots}>•••</span>
         </button>
+        <div className={styles.offerButton}>{offer}</div>
       </div>
     </div>
   );
 };
 
-export default SalesCard;

@@ -1,12 +1,8 @@
 .pageContainer{
-    background-color: white;
     width: 440px;
-    height: 900px;
-    transition: background-color 0.3s ease;
-}
-
-:global(.dark-mode) .pageContainer {
-    background-color: #17191A;
+    height: 1000px;
+    background-color: white;
+    margin: 0;
 }
 
 .accessibilityTitle{
@@ -18,16 +14,6 @@
     text-align: center;
     transition: color 0.3s ease;
 }
-
-:global(.dark-mode) .accessibilityTitle {
-    color: #ffffff;
-}
-
-.darkModeContainer{
-    margin: 0;
-    padding-left: 20px
-}
-
 .headerRow {
     display: flex;
     align-items: center;
@@ -45,7 +31,21 @@
     transition: filter 0.3s ease;
 }
 
-:global(.dark-mode) .headerRow img {
-    filter: brightness(0) invert(1);
+.filterButton {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: #212325;
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0 8px;
+  gap: 12px;
+  margin-right: 20px;
+  margin-top: 16px;
+
 }
 
+.chevron {
+  width: 8px;
+  transform: rotate(90deg);
+}
