@@ -3,16 +3,12 @@ import style from '@/app/event/event.module.css';
 import SmallCard from '@/ui/carousel-card/Small-card';
 import Header from '@/ui/header-component/header';
 
-export default function HomePage() {
+export default function EventPage() {
   return (
     <div>
       <Header />
-
-      {/* <h2 className={style.sectionTitle}>Featured This Month</h2> */}
-      <PopularEvents />
-
-      {/* <h2 className={style.sectionTitle}>Recommended for You</h2> */}
       <CarouselComponent />
+      <PopularEvents />
     </div>
   );
 }
@@ -20,17 +16,36 @@ export default function HomePage() {
 export function CarouselComponent() {
   return (
     <div className={style.carouselWrapper}>
-      <SmallCard
-        image="/images/banana_banner.png"
-        title="Sample Title"
-        description="This is a description."
-      />
+      <div className={style.carouselHeader}>
+        <h3 className={style.carouselTitle}>Popular in Vancouver</h3>
+        <h5 className={style.carouselSubtitle}>Happening live this year!</h5>
+      </div>
+      <div className={style.carouselScroll}>
+        <SmallCard
+          image="/images/banana_banner.png"
+          title="Sample Title"
+          description="This is a description."
+        />
+        <SmallCard
+          image="/images/banana_banner.png"
+          title="Sample Title"
+          description="This is a description."
+        />
+        <SmallCard
+          image="/images/banana_banner.png"
+          title="Sample Title"
+          description="This is a description."
+        />
+      </div>
     </div>
   );
 }
 
+
+
 export function PopularEvents() {
   return (
+    
     <div className={style.container}>
       <EventCard
         image="/images/art_vancouver.jpg"
