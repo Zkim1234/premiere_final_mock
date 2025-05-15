@@ -1,12 +1,27 @@
 import EventCard from '@/ui/full-sized-event-card/full-sized-event-card';
 import style from '@/app/event/event.module.css';
 import SmallCard from '@/ui/carousel-card/Small-card';
+import Header from '@/ui/header-component/header';
+
+export default function HomePage() {
+  return (
+    <div>
+      <Header />
+
+      {/* <h2 className={style.sectionTitle}>Featured This Month</h2> */}
+      <PopularEvents />
+
+      {/* <h2 className={style.sectionTitle}>Recommended for You</h2> */}
+      <CarouselComponent />
+    </div>
+  );
+}
 
 export function CarouselComponent() {
   return (
-    <div>
+    <div className={style.carouselWrapper}>
       <SmallCard
-        image="/example.jpg"
+        image="/images/banana_banner.png"
         title="Sample Title"
         description="This is a description."
       />
@@ -14,7 +29,7 @@ export function CarouselComponent() {
   );
 }
 
-export default function PopularEvents() {
+export function PopularEvents() {
   return (
     <div className={style.container}>
       <EventCard
