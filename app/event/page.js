@@ -22,19 +22,24 @@ export function CarouselComponent() {
       </div>
       <div className={style.carouselScroll}>
         <SmallCard
-          image="/images/banana_banner.png"
-          title="Sample Title"
-          description="This is a description."
+          image="/images/weeknd_banner.png"
+          title="The Weeknd"
+          description="After Hours till Dawn with Playboi Carti."
         />
         <SmallCard
-          image="/images/banana_banner.png"
-          title="Sample Title"
-          description="This is a description."
+          image="/images/tulip_banner.png"
+          title="Tulip Festival"
+          description="100 varieties of Tulips in Abbotsford."
         />
         <SmallCard
-          image="/images/banana_banner.png"
-          title="Sample Title"
-          description="This is a description."
+          image="/images/nightmarket_banner.png"
+          title="Night Market"
+          description="Come to Richmond Night Market."
+        />
+        <SmallCard
+          image="/images/kitsilano_banner.png"
+          title="Kitsilano Comedy Classic"
+          description="Produced By Jokers Canada."
         />
       </div>
     </div>
