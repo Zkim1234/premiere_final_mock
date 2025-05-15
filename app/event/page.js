@@ -1,4 +1,4 @@
-// import Header from '@/ui/header-component/header'
+
 import EventCard from '@/ui/full-sized-event-card/full-sized-event-card'
 import style from '@/app/event/event.module.css'
 
