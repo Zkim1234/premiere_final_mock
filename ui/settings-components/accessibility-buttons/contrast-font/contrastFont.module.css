@@ -1,13 +1,12 @@
-
-
-.contrastContainer .fontContainer {
-  min-width: 401px;
-  height: 77px;
+.contrastContainer, .fontContainer {
+  width: 401px;
+  height: 100px;
   background: #e4e4e4;
   border-radius: 8px;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 16px;
+  margin: 18px auto
 }
 
 .row {
@@ -30,7 +29,7 @@
 }
 
 .count {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   color: #212325;
   min-width: 50px;
   text-align: center;
@@ -38,8 +37,6 @@
   border-radius: 50%;
   padding: 10px;
 }
-
-
 
 .resetBtn {
   width: 100%;
@@ -49,4 +46,13 @@
   cursor: pointer;
   border-radius: 0 0 8px 8px;
   padding: 5px;
+}
+
+.subtitles{
+  margin-top: 20px;
+  margin-bottom: -20px;
+  margin-left: 20px;
+  margin: 20px 0px -20px 20px;
+  color: #212325;
+  font-size: 1.25rem;
 }

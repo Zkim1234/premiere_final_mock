@@ -1,31 +1,32 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "@/ui/settings-components/accessibility-buttons/toggle-dark/toggle.module.css";
 
 export default function ToggleDark() {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
   useEffect(() => {
-    const toggleSwitch = document.querySelector(`.${styles.toggleSwitch}`);
-    const toggleSlider = document.querySelector(`.${styles.toggleSlider}`);
-
-    if (!toggleSwitch || !toggleSlider) return;
-
     // Set initial state from localStorage
-    if (localStorage.getItem("darkMode") === "true") {
-      document.body.classList.add("dark-mode");
-      toggleSwitch.classList.add('active');
+    const savedMode = localStorage.getItem("darkMode") === "true";
+    setIsDarkMode(savedMode);
+    if (savedMode) {
+      document.documentElement.classList.add("dark-mode");
     }
-
-    toggleSwitch.onclick = () => {
-      const isActive = toggleSwitch.classList.toggle('active');
-      document.body.classList.toggle("dark-mode", isActive);
-      localStorage.setItem("darkMode", isActive);
-    };
-
   }, []);
+
+  const toggleDarkMode = () => {
+    const newMode = !isDarkMode;
+    setIsDarkMode(newMode);
+    document.documentElement.classList.toggle("dark-mode", newMode);
+    localStorage.setItem("darkMode", newMode);
+  };
 
   return (
     <div className={styles.toggleContainer}>
       <div className={styles.toggleLabel}>Dark Mode</div>
-      <div className={styles.toggleSwitch}>
+      <div 
+        className={`${styles.toggleSwitch} ${isDarkMode ? styles.active : ''}`}
+        onClick={toggleDarkMode}
+      >
         <div className={styles.toggleSlider}></div>
       </div>
     </div>

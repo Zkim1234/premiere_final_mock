@@ -8,10 +8,13 @@
   width: 401px;
   height: 60px;
   cursor: pointer;
-  font-size: 1.25rem;
   color: #222;
   margin: auto;
   margin-bottom: 5px;
+}
+
+.settingName{
+  font-size: 1.25rem;
 }
 
 .settingsButton:hover {

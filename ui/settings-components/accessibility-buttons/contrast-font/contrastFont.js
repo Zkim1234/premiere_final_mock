@@ -9,6 +9,9 @@ export default function ContrastFont() {
     const [font, setFont] = useState(16);
     return (
         <div>
+            <div>
+                <h2 className={styles.subtitles}>Contrast</h2>
+            </div>
             <div className={styles.contrastContainer}> 
 
             <div className={styles.row}>
@@ -24,9 +27,11 @@ export default function ContrastFont() {
                 Reset
             </button>
             </div>
-
+                <div>
+                    <h2 className={styles.subtitles}>Font Size</h2>
+                </div>
             <div className={styles.fontContainer}>
-
+                
             <div className={styles.row}>
                 <button className={styles.iconBtn} onClick={() => setFont(font - 1)}>
                     <Image src={minusIcon} alt="minus" width={32} height={32} />

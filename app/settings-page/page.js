@@ -11,7 +11,7 @@ export default function SettingsPage() {
   return (
     <div className={styles.pageContainer}>
       <div>
-        <h1 className={styles.settingsTitle}>Settings</h1>
+        <h4 className={styles.settingsTitle}>Settings</h4>
       </div>
 
       <div className={styles.settingsContainer}>
@@ -24,7 +24,7 @@ export default function SettingsPage() {
             arrowAlt="arrow"
           />
         </div>
-        <div onClick={() => router.push("/onboarding")}>
+        <div onClick={() => router.push("/tutorial")}>
           <SettingsButton
             image="settingsIcons\ic24-unlock.svg"
             alt="personalization"
@@ -67,8 +67,8 @@ export default function SettingsPage() {
       <div>
         <NavBar />
       </div>
-      <div className={styles.nextButtonContainer}>
-        <NextButton onClick={() => router.push("/onboarding")} text="Log Out" />
+      <div className={styles.logOutButtonContainer}>
+        <NextButton onClick={() => router.push("/")} text="Log Out" />
       </div>
     </div>
   );
