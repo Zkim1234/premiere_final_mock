@@ -12,7 +12,7 @@ const PopularEvents = () => {
 Thu, Apr 24, 2025 6:00 PM - Sun, Apr 27, 2025 5:00 PM "
       />
       <EventCard
-        image="/"
+        image="/images/"
         title="This is Bananas! 20th Anniversary "
         subtitle="Celebration Fundraiser"
       />
@@ -28,12 +28,3 @@ Fri, Apr 18, 2025 9:00 AM - 2:00 PM PDT"
 
 export default PopularEvents;
 
-
-// const LocationHeader = () => {
-//   return (
-//     <div>
-
-//       <Header />
-//     </div>
-//   )
-// }
