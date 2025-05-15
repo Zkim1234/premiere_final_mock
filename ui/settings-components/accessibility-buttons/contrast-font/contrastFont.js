@@ -19,7 +19,7 @@ export default function ContrastFont() {
                     <Image src={minusIcon} alt="minus" width={32} height={32} />
                 </button>
                 <span className={styles.count}>{count}</span>
-                <button className={styles.iconBtn} onClick={() => setCount(count + 10)}>
+                <button className={styles.iconBtn} onClick={() => setCount(Math.min(150, count + 10))}>
                     <Image src={plusIcon} alt="plus" width={32} height={32} />
                 </button>
             </div>
@@ -33,11 +33,11 @@ export default function ContrastFont() {
             <div className={styles.fontContainer}>
                 
             <div className={styles.row}>
-                <button className={styles.iconBtn} onClick={() => setFont(Math.max(0, font - 1))}>
+                <button className={styles.iconBtn} onClick={() => setFont(Math.max(5, font - 1))}>
                     <Image src={minusIcon} alt="minus" width={32} height={32} />
                 </button>
                 <span className={styles.count}>{font}</span>
-                <button className={styles.iconBtn} onClick={() => setFont(font + 1)}>
+                <button className={styles.iconBtn} onClick={() => setFont(Math.min(30, font + 1))}>
                     <Image src={plusIcon} alt="plus" width={32} height={32} />
                 </button>
             </div>

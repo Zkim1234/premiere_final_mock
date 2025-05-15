@@ -1,8 +1,8 @@
 .navContainer {
   display: flex;
-  justify-content: space-around; /* Space out the items evenly */
+  justify-content: space-between;
   align-items: center;
-  background-color: #2B4570; /* Dark blue background */
+  background-color: #2b4570;
   padding: 10px 0;
   position: fixed;
   bottom: 0;
@@ -20,14 +20,30 @@
   font-size: 1rem;
   text-align: center;
   cursor: pointer;
+  position: relative;
+  width: 20%;
+
+  margin-right: 5px;
+  margin-right: 5px;
+}
+
+.navItem.active::before {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: white;
+  position: absolute;
+  top: -10px;
+  border-radius: 20px;
 }
 
 .navItem img {
   width: 35px;
   height: 35px;
-  margin-bottom: 5px; /* Space between the icon and the label */
+  margin-bottom: 5px;
 }
 
 .navItem:hover img {
-  transform: scale(1.1); /* Enlarge the image on hover */
+  transform: scale(1.1);
 }
