@@ -1,7 +1,0 @@
-.container {
-    max-width: 480px; /* typical max width for large mobile screens */
-    margin: 0 auto;    /* center horizontally */
-    padding: 0 16px;   /* add some horizontal padding */
-    width: 100%;       /* take full width of its parent */
-    box-sizing: border-box;
-  }
