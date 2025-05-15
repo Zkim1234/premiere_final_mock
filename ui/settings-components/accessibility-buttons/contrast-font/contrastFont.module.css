@@ -6,7 +6,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 18px auto
+  margin: 18px auto;
+  transition: background-color 0.3s ease;
+}
+
+:global(.dark-mode) .contrastContainer,
+:global(.dark-mode) .fontContainer {
+  background: #212325;
 }
 
 .row {
@@ -31,11 +37,16 @@
 .count {
   font-size: 1.15rem;
   color: #212325;
-  min-width: 50px;
+  min-width: 38px;
   text-align: center;
   background-color: #8A8A8A;
-  border-radius: 50%;
-  padding: 10px;
+  border-radius: 100%;
+  padding: 5px;
+  transition: all 0.3s ease;
+}
+
+:global(.dark-mode) .count {
+  color: #ffffff;
 }
 
 .resetBtn {
@@ -46,13 +57,21 @@
   cursor: pointer;
   border-radius: 0 0 8px 8px;
   padding: 5px;
+  transition: all 0.3s ease;
 }
 
-.subtitles{
-  margin-top: 20px;
-  margin-bottom: -20px;
-  margin-left: 20px;
+:global(.dark-mode) .resetBtn {
+  background: #4D4F51;
+  color: #ffffff;
+}
+
+.subtitles {
   margin: 20px 0px -20px 20px;
   color: #212325;
   font-size: 1.25rem;
+  transition: color 0.3s ease;
+}
+
+:global(.dark-mode) .subtitles {
+  color: #ffffff;
 }
