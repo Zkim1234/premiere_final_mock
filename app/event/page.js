@@ -12,12 +12,12 @@ const PopularEvents = () => {
 Thu, Apr 24, 2025 6:00 PM - Sun, Apr 27, 2025 5:00 PM "
       />
       <EventCard
-        image="/images/"
+        image="/images/banana_banner.png"
         title="This is Bananas! 20th Anniversary "
         subtitle="Celebration Fundraiser"
       />
       <EventCard
-        image="/"
+        image="/images/swimming_banner.png"
         title="Pedalheads Swim Open House - Fremont"
         subtitle="Pedalheads Swim | Fremont Village
 Fri, Apr 18, 2025 9:00 AM - 2:00 PM PDT"
