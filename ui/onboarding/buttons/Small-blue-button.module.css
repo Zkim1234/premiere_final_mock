@@ -1,0 +1,22 @@
+.smallBlueButton {
+    width: 130px;
+    height: 59px;
+    background-color: #2b4570;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .smallBlueButton:hover:not(.disabled) {
+    opacity: 0.9;
+  }
+  
+  .smallBlueButton.disabled {
+    background-color: #e4e4e4;
+    color: #61605e;
+    cursor: not-allowed;
+  }
