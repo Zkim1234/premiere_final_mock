@@ -17,3 +17,4 @@ export default function HeaderBar({ title = 'Post', onBack }) {
     </div>
   );
 }
+//
