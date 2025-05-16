@@ -1,9 +1,18 @@
-import styles from '@/ui/full-sized-event-card/full-sized-event-card.module.css'
+'use client';
+
+import { useState } from 'react';
+import styles from '@/ui/full-sized-event-card/full-sized-event-card.module.css';
 import Image from 'next/image';
 
-export default function EventCard({ image, title, subtitle, highlight }) {
+export default function EventCard({ image, title, subtitle, highlight, size = 'normal' }) {
+  const [bookmarked, setBookmarked] = useState(false);
+
+  const toggleBookmark = () => {
+    setBookmarked(!bookmarked);
+  };
+
   return (
-    <div className={`${styles.card} ${highlight ? styles.highlight : ''}`}>
+    <div className={`${styles.card} ${highlight ? styles.highlight : ''} ${styles[size]}`}>
       <div className={styles.imageWrapper}>
         <Image
           src={image}
@@ -18,11 +27,12 @@ export default function EventCard({ image, title, subtitle, highlight }) {
           <p className={styles.subtitle}>{subtitle}</p>
         </div>
         <Image
-          src="/bookmarks/unsaved-bookmark.svg"
+          src={bookmarked ? '/bookmarks/saved-bookmark.svg' : '/bookmarks/unsaved-bookmark.svg'}
           width={24}
           height={24}
           alt="bookmark"
           className={styles.bookmark}
+          onClick={toggleBookmark}
         />
       </div>
     </div>

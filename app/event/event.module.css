@@ -9,7 +9,7 @@
   
   .carouselWrapper {
     overflow-x: auto;
-    padding: 0 20px;
+    /* padding: 0 20px; */
   }
   
   .carouselScroll {
@@ -32,7 +32,6 @@
 
   .sectionHeader {
     padding-top: 40px;
-    padding-left: 15px;
   }
 
   .seeMore {
@@ -44,4 +43,17 @@
     display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 20px;
+  }
+  
+  .eventCardContainer {
+    display: flex;
+    flex-wrap: wrap;       
+    gap: 12px;            
+  }
+
+  .quadrantCards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+    gap: 20px; /* spacing between cards */
   }
