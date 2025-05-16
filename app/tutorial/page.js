@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import SimpleChip from "@/ui/onboarding/buttons/Simple-chip";
 import NextButton from "@/ui/onboarding/buttons/next-button";
@@ -17,6 +18,7 @@ export default function Tutorial() {
   const [selectedNotification, setSelectedNotification] = useState("Yes");
   const [isTutorial, setIsTutorial] = useState(false);
   const [tutorialStep, setTutorialStep] = useState(0);
+  const router = useRouter();
 
   const handleNext = (skip = false) => {
     if (currentStep === 6 && skip) {
@@ -72,7 +74,7 @@ export default function Tutorial() {
             <div className="flex flex-row justify-between w-full">
               <SmallWhiteButton onClick={handleBackTutorial} text="Back" />
               <SmallBlueButton
-                /*onClick={() => router.push("/home")}*/ text="Done"
+                onClick={() => router.push("/home")} text="Done"
               />
             </div>
           )}

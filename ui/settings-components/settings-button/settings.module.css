@@ -1,0 +1,32 @@
+.settingsButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #E4E4E4;
+  border-radius: 5px;
+  padding: 12px 20px;
+  width: 401px;
+  height: 60px;
+  cursor: pointer;
+  color: #222;
+  margin: auto;
+  margin-bottom: 5px;
+}
+
+.settingName{
+  font-size: 1.25rem;
+}
+
+.settingsButton:hover {
+  background: #e0e0e0;
+}
+
+.leftContent {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.arrow {
+  display: block;
+}
