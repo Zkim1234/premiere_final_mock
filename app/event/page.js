@@ -2,16 +2,20 @@ import EventCard from '@/ui/full-sized-event-card/full-sized-event-card';
 import style from '@/app/event/event.module.css';
 import SmallCard from '@/ui/carousel-card/Small-card';
 import Header from '@/ui/header-component/header';
+import Slideshow from '@/ui/FeaturedEventSlider/EventSlider';
 
 export default function EventPage() {
   return (
     <div>
       <Header />
+    <Slideshow />
       <CarouselComponent />
       <PopularEvents />
     </div>
   );
 }
+
+
 
 export function CarouselComponent() {
   return (
@@ -46,8 +50,6 @@ export function CarouselComponent() {
   );
 }
 
-
-
 export function PopularEvents() {
   return (
     <div className={style.wrapper}>
@@ -76,4 +78,3 @@ export function PopularEvents() {
     </div>
   );
 }
-
