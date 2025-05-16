@@ -14,6 +14,7 @@ export default function EventPost() {
 
 
 
+
 function PostPage() {
   const handleBack = () => {
     window.history.back();
