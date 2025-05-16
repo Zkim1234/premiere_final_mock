@@ -2,6 +2,7 @@ import EventCard from '@/ui/full-sized-event-card/full-sized-event-card';
 import style from '@/app/homepage/homepage.module.css';
 import Header from '@/ui/header-component/header';
 import Slideshow from '@/ui/FeaturedEventSlider/EventSlider';
+import PromotionList from '@/ui/promotion-list/Promotion-list';
 
 export default function EventPage() {
   return (
@@ -10,6 +11,7 @@ export default function EventPage() {
       <Slideshow slides={slides} /> 
       <CarouselComponent />
       <PopularEvents />
+      <Promotions />
     </div>
   );
 }
@@ -106,3 +108,44 @@ export function PopularEvents() {
   );
 }
 
+export function Promotions() {
+    
+    return (
+      <main>
+       <div className={style.sectionHeader}>
+        <h3 className={style.sectionTitle}>Ongoing promotions</h3>
+        <div className={style.subtitleContainer}>
+          <h5 className={style.carouselSubtitle}>See what’s in store for you!</h5>
+          <h5 className={style.seeMore}>see more...</h5>
+        </div>
+      </div>
+  
+        <PromotionList
+          title="Vancouver: Sea to Sky Gondola and Whistler Day Trip"
+          image="/images/gondola.png"
+          price={214}
+          discount={53}
+        />
+  
+        <PromotionList
+          title="Vancouver: Gastown Walking Food Tour"
+          image="/images/gastown_foodtour.png"
+          price={134.00}
+          discount= {0}
+        />
+        <PromotionList
+          title="Apple AirPods Pro 2 Wireless Earbuds"
+          image="/images/airpods.png"
+          price={329}
+          discount= {59.01}
+        />
+        <PromotionList
+          title="Sony WH-CH720N "
+          image="/images/sony_headphones.png"
+          price={249.99}
+          discount= {100}
+        />
+      </main>
+    );
+  }
+  
