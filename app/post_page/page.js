@@ -1,9 +1,22 @@
 'use client';
+
 import HeaderBar from '@/ui/post-header/post-header';
 
-export default function PostPage() {
+
+export default function EventPost() {
+    return (
+      <div>
+        <PostPage />
+
+      </div>
+    );
+  }
+
+
+
+function PostPage() {
   const handleBack = () => {
-    window.history.back(); 
+    window.history.back();
   };
 
   return (
@@ -13,3 +26,5 @@ export default function PostPage() {
     </>
   );
 }
+
+
