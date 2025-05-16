@@ -4,6 +4,7 @@ import Image from 'next/image';
 import HeaderBar from '@/ui/post-header/post-header';
 import Slideshow from '@/ui/post-slider/post-slider';
 import styles from './post-page.module.css';
+import EventCard from '@/ui/full-sized-event-card/full-sized-event-card';
 
 const slides = [
   { image: '/images/weeknd_01.png' },
@@ -54,7 +55,6 @@ function EventDetailsPage() {
         <p className={styles.value}>BC Place<br />Vancouver, BC</p>
       </div>
 
-      {/* About Tickets */}
       <div className={styles.section}>
         <h3 className={styles.sectionTitle}>About tickets</h3>
         <p className={styles.paragraph}>
@@ -62,7 +62,6 @@ function EventDetailsPage() {
         </p>
       </div>
 
-      {/* Additional Info */}
       <div className={styles.section}>
         <h3 className={styles.sectionTitle}>Additional Information</h3>
         <p className={styles.paragraph}>
@@ -75,12 +74,67 @@ function EventDetailsPage() {
   );
 }
 
+function MoreLikeThis() {
+  return (
+    <div className={styles.quarterCardsContainer}>
+      <div className={styles.sectionHead}>
+        <h3 className={styles.titleSection}>More like this...</h3>
+      </div>
+      <div className={styles.quarterCards}>
+        <EventCard
+          image="/images/weeknd_banner.png"
+          title="The Weeknd"
+          subtitle="After Hours till Dawn with Playboi Carti."
+          size="small"
+        />
+        <EventCard
+          image="/images/tulip_banner.png"
+          title="Tulip Festival"
+          subtitle="100 varieties of Tulips in Abbotsford."
+          size="small"
+        />
+        <EventCard
+          image="/images/nightmarket_banner.png"
+          title="Night Market"
+          subtitle="Come to Richmond Night Market."
+          size="small"
+        />
+        <EventCard
+          image="/images/kitsilano_banner.png"
+          title="Kitsilano Comedy Classic"
+          subtitle="(Produced By Jokers..."
+          size="small"
+        />
+      </div>
+    </div>
+  );
+}
+
+function LearnMoreButton() {
+  const handleClick = () => {
+    window.open(
+      'https://www.ticketmaster.ca/the-weeknd-tickets/artist/1697014?landing=c&awtrc=true&c=SEM_TMMCONCERTS_ggl_22202241780_172499230537_the%20weeknd%20ticketmaster&GCID=0&gad_source=1&gad_campaignid=22202241780&gbraid=0AAAAAD_KsMK-lR-vG1KBYjGjMUFARLv0z&gclid=Cj0KCQjwxJvBBhDuARIsAGUgNfhbZmB3BLGy-21yPddQ3iRIH_ysgusgY0tlI9FSf4hZijwS9Mb02bsaAvt-EALw_wcB&gclsrc=aw.ds',
+      '_blank'
+    );
+  };
+
+  return (
+    <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+      <button className={styles.nextButton} onClick={handleClick}>
+      Visit Ticket Master.com
+      </button>
+    </div>
+  );
+}
+
 export default function EventPost() {
   return (
     <div>
       <PostPage />
       <Slideshow slides={slides} />
       <EventDetailsPage />
+      <MoreLikeThis />
+      <LearnMoreButton />
     </div>
   );
 }
