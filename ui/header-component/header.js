@@ -1,7 +1,7 @@
 import styles from './header.module.css';
 import Image from 'next/image';
 
-export default function Header() {
+export default function Header({ sectionTitle = 'Featured This Month' }) {
   return (
     <div className={styles.headerWrapper}>
       <div className={styles.topBar}>
@@ -29,8 +29,9 @@ export default function Header() {
           />
         </div>
       </div>
+
       <div className={styles.sectionTitle}>
-        <h2>Featured This Month</h2>
+        <h2>{sectionTitle}</h2>
       </div>
     </div>
   );
