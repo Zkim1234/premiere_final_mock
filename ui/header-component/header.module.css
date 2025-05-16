@@ -1,0 +1,42 @@
+.headerWrapper {
+    width: 100%;
+  }
+  
+  .topBar {
+    background-color: #263a6d; /* navy/blue */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    color: white;
+  }
+  
+  .locationMenu {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .icons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .sectionTitle {
+    background-color: white;
+    padding: 12px 16px;
+  }
+  
+  .sectionTitle h2 {
+    margin: 0;
+    font-weight: normal;
+    color: #111;
+  }
+  
+  .locationText {
+    font-size: 25px;
+    font-weight: normal;
+  }
