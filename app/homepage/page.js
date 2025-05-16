@@ -17,14 +17,14 @@ export default function EventPage() {
 
 const slides = [
   {
-    image: '/images/tina_banner.png',
-    title: 'TINA – The Tina Turner Musical',
-    description: 'Queen Elizabeth Theatre 630 Hamilton Street, Vancouver\n2hrs, 40mins with 1 intermission.',
+    image: '/images/juno_awards.png',
+    title: 'Juno Awards in Vancouver',
+    description: 'Takes place at Rogers Arena. Sunday, March 30, 5:00PM..',
   },
   {
-    image: '/images/blossom_banner.png',
-    title: 'Blossoms After Dark',
-    description: 'Blossoms After Dark takes place at David Lam Park.\nFriday, March 28, 6:30PM – 10:00PM\nSaturday, March 29, 6:30PM – 10:00PM',
+    image: '/images/zara_sale.png',
+    title: 'Zara Sale',
+    description: 'Price drops and sales everyday at your local Zara.',
   },
   {
     image: '/images/squamish_banner.png',
