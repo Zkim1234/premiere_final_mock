@@ -1,0 +1,68 @@
+.main {
+    font-family: 'Lexend', sans-serif;
+    padding: 0 20px ;
+    max-width: 768px;
+    margin: auto;
+    line-height: 1.6;
+  }
+  
+  .headerRow {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  
+  .eventTitle {
+    font-size: 20px;
+    font-weight: normal;
+  }
+  
+  .artist {
+    color: #888;
+    margin: 0;
+    font-size: 13px;
+  }
+  
+  .icons {
+    display: flex;
+    align-items: start;
+    gap: 12px;
+    font-size: 20px;
+    color: #223A6A;
+  }
+  
+  .infoGrid {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+    margin-bottom: 16px;
+  }
+  
+  .label {
+    color: #6B6B6B;
+    font-size: 13px;
+  }
+  
+  .value {
+    font-size: 16px;
+    font-weight: normal;
+  }
+  
+  .venue {
+    margin-bottom: 24px;
+  }
+  
+  .section {
+    margin-bottom: 24px;
+  }
+  
+  .sectionTitle {
+    font-size: 20px;
+    font-weight: normal;
+  }
+  
+  .paragraph {
+    font-size: 15px;
+    color: #333;
+  }
+  
