@@ -2,25 +2,7 @@
 import { useState } from 'react';
 import styles from './EventSlider.module.css';
 
-const slides = [
-  {
-    image: '/images/tina_banner.png',
-    title: 'TINA – The Tina Turner Musical',
-    description: 'Queen Elizabeth Theatre 630 Hamilton Street, Vancouver\n2hrs, 40mins with 1 intermission.',
-  },
-  {
-    image: '/images/blossom_banner.png',
-    title: 'Blossoms After Dark',
-    description: 'Blossoms After Dark takes place at David Lam Park.\nFriday, March 28, 6:30PM – 10:00PM\nSaturday, March 29, 6:30PM – 10:00PM',
-  },
-  {
-    image: '/images/squamish_banner.png',
-    title: 'Squamish Spring Dance (Grade 7-9)',
-    description: 'Squamish Nation Totem Hall\nFri, May 16, 2025 7:30 PM - 9:30 PM PDT',
-  },
-];
-
-export default function Slideshow() {
+export default function Slideshow({ slides }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -31,7 +13,7 @@ export default function Slideshow() {
     setTimeout(() => {
       setCurrentIndex(newIndex);
       setIsAnimating(false);
-    }, 400); // This should match the fade-out duration
+    }, 400); // match fade duration
   };
 
   const nextSlide = () => {

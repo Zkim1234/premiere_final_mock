@@ -1,14 +1,13 @@
 import EventCard from '@/ui/full-sized-event-card/full-sized-event-card';
 import style from '@/app/event/event.module.css';
-import SmallCard from '@/ui/carousel-card/Small-card';
 import Header from '@/ui/header-component/header';
 import Slideshow from '@/ui/FeaturedEventSlider/EventSlider';
 
 export default function EventPage() {
   return (
     <div>
-      <Header />
-    <Slideshow />
+      <Header sectionTitle="Featured this month" /> 
+      <Slideshow slides={slides} /> 
       <CarouselComponent />
       <PopularEvents />
       <HandpickedCards />
@@ -16,7 +15,23 @@ export default function EventPage() {
   );
 }
 
-
+const slides = [
+  {
+    image: '/images/tina_banner.png',
+    title: 'TINA – The Tina Turner Musical',
+    description: 'Queen Elizabeth Theatre 630 Hamilton Street, Vancouver\n2hrs, 40mins with 1 intermission.',
+  },
+  {
+    image: '/images/blossom_banner.png',
+    title: 'Blossoms After Dark',
+    description: 'Blossoms After Dark takes place at David Lam Park.\nFriday, March 28, 6:30PM – 10:00PM\nSaturday, March 29, 6:30PM – 10:00PM',
+  },
+  {
+    image: '/images/squamish_banner.png',
+    title: 'Squamish Spring Dance (Grade 7-9)',
+    description: 'Squamish Nation Totem Hall\nFri, May 16, 2025 7:30 PM - 9:30 PM PDT',
+  },
+];
 
 export function CarouselComponent() {
   return (
