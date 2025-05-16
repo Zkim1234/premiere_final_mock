@@ -22,7 +22,10 @@ export function CarouselComponent() {
     <div className={style.carouselWrapper}>
       <div className={style.carouselHeader}>
         <h3 className={style.carouselTitle}>Popular in Vancouver</h3>
-        <h5 className={style.carouselSubtitle}>Happening live this year!</h5>
+        <div className={style.subtitleContainer}>
+          <h5 className={style.carouselSubtitle}>Happening live this year!</h5>
+          <h5 className={style.seeMore}>see more...</h5>
+        </div>
       </div>
       <div className={style.carouselScroll}>
         <SmallCard
@@ -55,7 +58,10 @@ export function PopularEvents() {
     <div className={style.wrapper}>
       <div className={style.sectionHeader}>
         <h3 className={style.sectionTitle}>Happening this month</h3>
-        <h5 className={style.subsectionTitle}>Don't miss out!</h5>
+        <div className={style.subtitleContainer}>
+          <h5 className={style.carouselSubtitle}>Don't miss out!</h5>
+          <h5 className={style.seeMore}>see more...</h5>
+        </div>
       </div>
 
       <div className={style.container}>

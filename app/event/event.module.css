@@ -34,3 +34,14 @@
     padding-top: 40px;
     padding-left: 15px;
   }
+
+  .seeMore {
+    color: #2B4570;
+
+  }
+
+  .subtitleContainer {
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+  }

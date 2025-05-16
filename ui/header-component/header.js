@@ -30,7 +30,7 @@ export default function Header() {
         </div>
       </div>
       <div className={styles.sectionTitle}>
-        <h1>Featured This Month</h1>
+        <h2>Featured This Month</h2>
       </div>
     </div>
   );
