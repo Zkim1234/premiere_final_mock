@@ -1,5 +1,5 @@
 import EventCard from '@/ui/full-sized-event-card/full-sized-event-card';
-import style from '@/app/event/event.module.css';
+import style from '@/app/homepage/homepage.module.css';
 import Header from '@/ui/header-component/header';
 import Slideshow from '@/ui/FeaturedEventSlider/EventSlider';
 
@@ -10,7 +10,6 @@ export default function EventPage() {
       <Slideshow slides={slides} /> 
       <CarouselComponent />
       <PopularEvents />
-      <HandpickedCards />
     </div>
   );
 }
@@ -107,42 +106,3 @@ export function PopularEvents() {
   );
 }
 
-export function HandpickedCards() {
-  return (
-    <div className={style.quadrantWrapper}>
-      <div className={style.sectionHeader}>
-        <h3 className={style.sectionTitle}>We think you might like</h3>
-        <div className={style.subtitleContainer}>
-          <h5 className={style.carouselSubtitle}>Handpicked just for you!</h5>
-          <h5 className={style.seeMore}>see more...</h5>
-        </div>
-      </div>
-      <div className={style.quadrantCards}>
-      <EventCard
-        image="/images/weeknd_banner.png"
-        title="The Weeknd"
-        subtitle="After Hours till Dawn with Playboi Carti."
-        size="small"
-      />
-      <EventCard
-        image="/images/tulip_banner.png"
-        title="Tulip Festival"
-        subtitle="100 varieties of Tulips in Abbotsford."
-        size="small"
-      />
-      <EventCard
-        image="/images/nightmarket_banner.png"
-        title="Night Market"
-        subtitle="Come to Richmond Night Market."
-        size="small"
-      />
-      <EventCard
-        image="/images/kitsilano_banner.png"
-        title="Kitsilano Comedy Classic"
-        subtitle="(Produced By Jokers..."
-        size="small"
-      />
-      </div>
-    </div>
-  )
-} 
