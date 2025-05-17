@@ -74,7 +74,8 @@ export default function Tutorial() {
             <div className="flex flex-row justify-between w-full">
               <SmallWhiteButton onClick={handleBackTutorial} text="Back" />
               <SmallBlueButton
-                onClick={() => router.push("/home")} text="Done"
+                onClick={() => router.push("/homepage")}
+                text="Done"
               />
             </div>
           )}
@@ -114,7 +115,9 @@ export default function Tutorial() {
               priority
             />
             <div className={styles.tutorialInstruction}>
-              <h2>Step 1: Find your events and discounts</h2>
+              <h2>
+                Step 1: <br></br>Find your events and discounts
+              </h2>
               <p>Search for your next game plan and deals.</p>
               {tutorialButton()}
             </div>
@@ -131,7 +134,9 @@ export default function Tutorial() {
               priority
             />
             <div className={styles.tutorialInstruction}>
-              <h2>Step 2: Save it and use anytime</h2>
+              <h2>
+                Step 2: <br></br>Save it and use anytime
+              </h2>
               <p>Save your events and discount in Premiere.</p>
               {tutorialButton()}
             </div>
@@ -148,7 +153,9 @@ export default function Tutorial() {
               priority
             />
             <div className={styles.tutorialInstruction}>
-              <h2>Step 3: Stay on the loop and start saving!</h2>
+              <h2>
+                Step 3: <br></br>Stay on the loop and start saving!
+              </h2>
               <p>
                 We'll keep you in touch for events and deals happening in
                 Vancouver.
