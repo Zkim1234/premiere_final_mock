@@ -1,22 +1,25 @@
+.bodyContainer {
+  background-color: white;
+  color: black;
+  height: 1680px;
+}
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
-    min-height: 100vh;
   }
   
   .carouselWrapper {
     overflow-x: auto;
-    
-    padding: 20px 0;
+    margin-left: 20px;
   }
   
   .carouselScroll {
     display: flex;
     flex-direction: row;
     gap: 12px;
+    margin-bottom: 20px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
@@ -25,36 +28,34 @@
   .carouselScroll > * {
     flex: 0 0 auto;
     scroll-snap-align: start;
-  }
-  
-  .carouselHeader {
-    padding-bottom: 10px;
+    margin-bottom: 15px;
   }
 
   .sectionHeader {
     padding-top: 20px;
+    margin-left: 20px;
   }
 
   .seeMore {
     color: #2B4570;
-
+    cursor: pointer;
   }
 
+
   .subtitleContainer {
-    display: flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  /* padding-bottom: 10px; */
+  padding-bottom: 20px;
+  margin-right: 20px;
   }
   
   .eventCardContainer {
     display: flex;
     flex-wrap: wrap;       
-    gap: 12px;            
+    gap: 12px;   
+    margin-right: 20px;
+    margin-left: 20px;        
   }
 
-  .bodyContainer {
-    background-color: white;
-    color: black;
-  }
 

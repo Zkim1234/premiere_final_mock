@@ -45,7 +45,7 @@ export function FoodCarousel() {
         <h3 className={style.carouselTitle}>Food</h3>
         <div className={style.subtitleContainer}>
           <h5 className={style.carouselSubtitle}>Find the best deals on food!</h5>
-          <h5 className={style.seeMore} onClick={() => router.push('/sales-food')}>see more...</h5>
+          <h5 className={style.seeMore} onClick={() => router.push('/sales_page/sales-food')}>see more...</h5>
         </div>
       </div>
       <div className={style.carouselScroll}>

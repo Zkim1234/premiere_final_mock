@@ -1,8 +1,8 @@
 'use client';
 
 import Image from 'next/image';
-import HeaderBar from '@/ui/post-header/post-header';
-import Slideshow from '@/ui/post-slider/post-slider';
+import HeaderBar from '@/ui/PostHeader/post-header';
+import Slideshow from '@/ui/PostSlider/post-slider';
 import styles from './post-page.module.css';
 import EventCard from '@/ui/FullSizedEventCard/FullSizedEventCard';
 import NavBar from '@/ui/NavBar/NavBar';

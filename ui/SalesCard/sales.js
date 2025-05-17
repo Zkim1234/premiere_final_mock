@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './sales.module.css';
 
 export default function SalesCard ({image, alt, brandName, text, offer}){
+  const [bookmarked, setBookmarked] = useState(false);
+
+  const toggleBookmark = () => {
+    setBookmarked(!bookmarked);
+  };
+
   return (
     <div className={styles.salesCard}>
       <div className={styles.bookmarkIcon}>
-        <img src="/unsaved_Icon.svg" alt="bookmark"/>
+        <img src={bookmarked ? "/bookmarks/saved-bookmark.svg" : "/bookmarks/unsaved-bookmark.svg"} alt="bookmark" onClick={toggleBookmark}/>
       </div>
       <div className={styles.salesCardContent}>
         <div className={styles.logoSection}>
@@ -21,9 +27,6 @@ export default function SalesCard ({image, alt, brandName, text, offer}){
         </div>
       </div>
       <div className={styles.actionsSection}>
-        <button className={styles.moreOptionsButton}>
-          <span className={styles.dots}>•••</span>
-        </button>
         <div className={styles.offerButton}>{offer}</div>
       </div>
     </div>

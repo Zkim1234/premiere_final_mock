@@ -33,7 +33,7 @@ export default function SettingsPage() {
             arrowAlt="arrow"
           />
         </div>
-        <div>
+        <div onClick={() => router.push("/settings-page/accessibility")}>
           <SettingsButton
             image="settingsIcons\ic24-help.svg"
             alt="help"
@@ -42,7 +42,7 @@ export default function SettingsPage() {
             arrowAlt="arrow"
           />
         </div>
-        <div>
+        <div onClick={() => router.push("/settings-page/accessibility")}>
           <SettingsButton
             image="settingsIcons\Info.svg"
             alt="about"
@@ -51,7 +51,7 @@ export default function SettingsPage() {
             arrowAlt="arrow"
           />
         </div>
-        <div>
+        <div onClick={() => router.push("/settings-page/accessibility")}>
           <SettingsButton
             image="settingsIcons\file_copy.svg"
             alt="terms"
@@ -61,7 +61,7 @@ export default function SettingsPage() {
           />
         </div>
       </div>
-      <div>
+      <div onClick={() => router.push("/")}>
         <h4 className={styles.deleteAccount}>Delete Account</h4>
       </div>
       <div>

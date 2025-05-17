@@ -1,10 +1,12 @@
 .bodyContainer {
   background-color: white;
+  color: black;
+  height: 2475px;
 }
 
 .carouselWrapper {
   overflow-x: auto;
-  /* padding: 0 20px; */
+  margin-left: 20px;
 }
 
 .carouselScroll {
@@ -19,18 +21,19 @@
 .carouselScroll > * {
   flex: 0 0 auto;
   scroll-snap-align: start;
+  margin-bottom: 15px;
 }
 
-.carouselHeader {
-  padding-bottom: 10px;
-}
 
 .sectionHeader {
   padding-top: 40px;
+  margin-left: 20px;
 }
 
 .seeMore {
   color: #2b4570;
+  cursor: pointer;
+
 }
 
 .subtitleContainer {
@@ -38,10 +41,18 @@
   justify-content: space-between;
   align-items: center;
   padding-bottom: 20px;
+  margin-right: 20px;
 }
 
 .eventCardContainer {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 10px;
+  margin-right: 20px;
+  margin-left: 20px;
+  
+}
+
+.promotionListContainer{
+  cursor: pointer;
 }

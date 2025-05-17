@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import SalesCard from "@/ui/SalesCard/sales";
-import styles from "@/app/sales-food/sales-food.module.css";
+import styles from "@/app/sales_page/sales-food/sales-food.module.css";
 import NavBar from "@/ui/NavBar/NavBar";
 import { useRouter } from "next/navigation";
 export default function SalesFood() {
@@ -10,7 +10,7 @@ export default function SalesFood() {
         
         <div className={styles.pageContainer}>
             <div className={styles.headerRow}>
-        <img src="/Arrow_down.svg" alt="back" onClick={() => router.back("/sales_page")}/>
+        <img src="/blue_Arrow.svg" alt="back" onClick={() => router.back("/sales_page")}/>
         <h1 className={styles.accessibilityTitle}>All Food</h1>
       </div>
       <div className={styles.filterButton}>
@@ -19,7 +19,7 @@ export default function SalesFood() {
       </div>
             <div className={styles.salesCardContainer}>
                 <SalesCard
-                image="images/Dominos.png"
+                image="/images/Dominos.png"
                 alt="Domino's Pizza Logo"
                 brandName="Dominos"
                 text="Get a FREE pizza when you buy one at regular price!"
@@ -28,7 +28,7 @@ export default function SalesFood() {
             </div>
             <div className={styles.salesCardContainer}>
                 <SalesCard
-                image="images\Popeyes-Logo.png"
+                image="/images\Popeyes-Logo.png"
                 alt="Popeyes logo"
                 brandName="Popeyes"
                 text="For a limited time only, get 20% off Popeyes wings."
@@ -37,7 +37,7 @@ export default function SalesFood() {
             </div>
             <div className={styles.salesCardContainer}>
                 <SalesCard
-                image="images\Tim_Hortons-Logo.wine.png"
+                image="/images\Tim_Hortons-Logo.wine.png"
                 alt="Tim hortons Logo"
                 brandName="Tim Hortons"
                 text="Get 20% off on all Craveables at Tim Hortons!"
@@ -46,7 +46,7 @@ export default function SalesFood() {
             </div>
             <div className={styles.salesCardContainer}>
                 <SalesCard
-                image="images\Logo-Freshslice-Pizza.jpg"
+                image="/images\Logo-Freshslice-Pizza.jpg"
                 alt="Freshslice Pizza Logo"
                 brandName="Freshslice Pizza"
                 text="Buy a medium size pizza, Get the second one for free!"
@@ -55,7 +55,7 @@ export default function SalesFood() {
             </div>
             <div className={styles.salesCardContainer}>
                 <SalesCard
-                image="images\blenz.jpg"
+                image="/images\blenz.jpg"
                 alt="Blenz Coffee Logo"
                 brandName="Blenz Coffee"
                 text="Enjoy 10% off all pastries at Blenz Coffee"

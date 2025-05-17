@@ -2,7 +2,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 438px;
     height: 90px;
     gap: 20px;
     padding: 10px;
@@ -36,7 +35,7 @@
   }
   
   .title {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: normal;
     color: #000;
     line-height: 1.2;
@@ -53,13 +52,13 @@
   }
   
   .price {
-    font-size: 18px;
+    font-size: 1.125rem;
     text-decoration: line-through;
     color: #333;
   }
   
   .discountPrice {
-    font-size: 25px;
+    font-size: 1.563rem;
     font-weight: 600;
     color: #FF4040;
   }

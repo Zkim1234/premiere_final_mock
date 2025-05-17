@@ -1,8 +1,11 @@
 'use client';
 import { useState } from 'react';
 import styles from './EventSlider.module.css';
+import { useRouter } from 'next/navigation';
 
 export default function Slideshow({ slides }) {
+  const router = useRouter();
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -33,7 +36,7 @@ export default function Slideshow({ slides }) {
             ${index === currentIndex ? styles.active : ''} 
             ${isAnimating ? styles.fadeOut : ''}`}
         >
-          <img src={slide.image} alt={slide.title} className={styles.slideImage} />
+          <img src={slide.image} alt={slide.title} className={styles.slideImage} onClick={() => router.push("/post_page")} />
           <div className={styles.caption}>
             <h3>{slide.title}</h3>
             <p>{slide.description}</p>

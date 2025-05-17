@@ -1,9 +1,12 @@
+"use client";
 import EventCard from "@/ui/FullSizedEventCard/FullSizedEventCard";
 import style from "@/app/homepage/homepage.module.css";
 import Header from "@/ui/HeaderComponent/Header";
 import Slideshow from "@/ui/FeaturedEventSlider/EventSlider";
 import PromotionList from "@/ui/PromotionList/Promotion-list";
 import NavBar from "@/ui/NavBar/NavBar";
+import { useRouter } from "next/navigation";
+
 
 export default function EventPage() {
   return (
@@ -38,16 +41,17 @@ const slides = [
 ];
 
 export function CarouselComponent() {
+  const router = useRouter();
   return (
     <div className={style.carouselWrapper}>
       <div className={style.carouselHeader}>
         <h3 className={style.carouselTitle}>Recently viewed</h3>
         <div className={style.subtitleContainer}>
           <h5 className={style.carouselSubtitle}>Take another look here!!</h5>
-          <h5 className={style.seeMore}>see more...</h5>
+          <h5 className={style.seeMore} onClick={() => router.push("/event")}>see more...</h5>
         </div>
       </div>
-      <div className={style.carouselScroll}>
+      <div className={style.carouselScroll} onClick={() => router.push("/post_page")}>
         <EventCard
           image="/images/autoshow_banner.png"
           title="Auto Show"
@@ -78,6 +82,8 @@ export function CarouselComponent() {
 }
 
 export function PopularEvents() {
+  const router = useRouter();
+
   return (
     <div className={style.wrapper}>
       <div className={style.sectionHeader}>
@@ -86,10 +92,10 @@ export function PopularEvents() {
           <h5 className={style.carouselSubtitle}>
             See what's in store for you!
           </h5>
-          <h5 className={style.seeMore}>see more...</h5>
+          <h5 className={style.seeMore} onClick={() => router.push("/event")}>see more...</h5>
         </div>
       </div>
-      <div className={style.eventCardContainer}>
+      <div className={style.eventCardContainer} onClick={() => router.push("/post_page")}>
         <EventCard
           image="/images/art_vancouver.jpg"
           title="Art Vancouver 2025"
@@ -114,17 +120,19 @@ export function PopularEvents() {
 }
 
 export function Promotions() {
+  const router = useRouter();
   return (
-    <main>
+    <main className={style.wrapper}>
       <div className={style.sectionHeader}>
         <h3 className={style.sectionTitle}>Ongoing promotions</h3>
         <div className={style.subtitleContainer}>
           <h5 className={style.carouselSubtitle}>
             See what's in store for you!
           </h5>
-          <h5 className={style.seeMore}>see more...</h5>
+          <h5 className={style.seeMore} onClick={() => router.push("/event")}>see more...</h5>
         </div>
       </div>
+      <div className={style.promotionListContainer} onClick={() => router.push("/sales_page")}>
 
       <PromotionList
         title="Vancouver: Sea to Sky Gondola and Whistler Day Trip"
@@ -151,6 +159,7 @@ export function Promotions() {
         price={249.99}
         discount={100}
       />
+      </div>
     </main>
   );
 }

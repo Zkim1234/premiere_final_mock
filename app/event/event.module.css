@@ -1,5 +1,7 @@
 .bodyContainer {
   background-color: white;
+  color: black;
+  height: 2475px;
 }
 
 .container {
@@ -7,17 +9,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
-    min-height: 100vh;
   }
 
-  .bodyContainer{
-    background-color: white;
-  }
   
   .carouselWrapper {
     overflow-x: auto;
-    /* padding: 0 20px; */
+    margin-left: 20px;
   }
   
   .carouselScroll {
@@ -32,10 +29,12 @@
   .carouselScroll > * {
     flex: 0 0 auto;
     scroll-snap-align: start;
+    margin-bottom: 15px;
   }
   
   .carouselHeader {
     padding-bottom: 10px;
+    margin-left: 20px;
   }
 
   .sectionHeader {
@@ -44,7 +43,12 @@
 
   .seeMore {
     color: #2B4570;
+    cursor: pointer;
+  }
 
+  .wrapper{
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   .subtitleContainer {
@@ -57,11 +61,18 @@
   .eventCardContainer {
     display: flex;
     flex-wrap: wrap;       
-    gap: 12px;            
+    gap: 12px;  
+    margin-right: 20px;
+    margin-left: 20px;          
+  }
+
+  .quadrantWrapper{
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   .quadrantCards {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Two cards per row */
-    gap: 20px; /* spacing between cards */
+    gap: 20px;
   }

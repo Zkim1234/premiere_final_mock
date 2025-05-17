@@ -115,7 +115,7 @@ export function HandpickedCards() {
       <div className={style.sectionHeader}>
         <h3 className={style.sectionTitle}>We think you might like</h3>
         <div className={style.subtitleContainer}>
-          <h5 className={style.carouselSubtitle}>Handpicked just for you!</h5>
+          <h5 className={style.carouselSubtitle}>Hand picked just for you!</h5>
           <h5 className={style.seeMore}>see more...</h5>
         </div>
       </div>
