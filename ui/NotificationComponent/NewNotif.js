@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "@/ui/notification-component/new-notif.module.css";
+import styles from "@/ui/NotificationComponent/NewNotif.module.css";
 
 export default function NotificationCard({ image, alt, name, tag, text }) {
   const cardClass =

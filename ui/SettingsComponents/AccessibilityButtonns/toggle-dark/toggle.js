@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styles from "@/ui/settings-components/accessibility-buttons/toggle-dark/toggle.module.css";
+import styles from "@/ui/SettingsComponents/AccessibilityButtonns/toggle-dark/toggle.module.css";
 
 export default function ToggleDark() {
   const [isDarkMode, setIsDarkMode] = useState(false);

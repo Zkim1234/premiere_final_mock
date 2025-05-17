@@ -159,4 +159,8 @@
     cursor: not-allowed;
   }
   
+  .bodyContainer {
+    background-color: white;
+  }
+  
   

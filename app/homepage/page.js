@@ -1,17 +1,19 @@
-import EventCard from "@/ui/full-sized-event-card/full-sized-event-card";
+import EventCard from "@/ui/FullSizedEventCard/FullSizedEventCard";
 import style from "@/app/homepage/homepage.module.css";
-import Header from "@/ui/header-component/header";
+import Header from "@/ui/HeaderComponent/Header";
 import Slideshow from "@/ui/FeaturedEventSlider/EventSlider";
-import PromotionList from "@/ui/promotion-list/Promotion-list";
+import PromotionList from "@/ui/PromotionList/Promotion-list";
+import NavBar from "@/ui/NavBar/NavBar";
 
 export default function EventPage() {
   return (
     <div className={style.bodyContainer}>
-      <Header sectionTitle="For youu" />
+      <Header sectionTitle="For you" />
       <Slideshow slides={slides} />
       <CarouselComponent />
       <PopularEvents />
       <Promotions />
+      <NavBar />
     </div>
   );
 }
@@ -82,7 +84,7 @@ export function PopularEvents() {
         <h3 className={style.sectionTitle}>More Events</h3>
         <div className={style.subtitleContainer}>
           <h5 className={style.carouselSubtitle}>
-            See what’s in store for you!
+            See what's in store for you!
           </h5>
           <h5 className={style.seeMore}>see more...</h5>
         </div>
@@ -118,7 +120,7 @@ export function Promotions() {
         <h3 className={style.sectionTitle}>Ongoing promotions</h3>
         <div className={style.subtitleContainer}>
           <h5 className={style.carouselSubtitle}>
-            See what’s in store for you!
+            See what's in store for you!
           </h5>
           <h5 className={style.seeMore}>see more...</h5>
         </div>

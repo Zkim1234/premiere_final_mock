@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import styles from '@/ui/full-sized-event-card/full-sized-event-card.module.css';
+import styles from '@/ui/FullSizedEventCard/FullSizedEventCard.module.css';
 import Image from 'next/image';
 
 export default function EventCard({ image, title, subtitle, highlight, size = 'normal' }) {

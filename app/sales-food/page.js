@@ -1,14 +1,16 @@
 "use client";
 import React from "react";
-import SalesCard from "@/ui/sales-card/sales";
+import SalesCard from "@/ui/SalesCard/sales";
 import styles from "@/app/sales-food/sales-food.module.css";
-import NavBar from "@/ui/nav-bar/nav-bar";
-
+import NavBar from "@/ui/NavBar/NavBar";
+import { useRouter } from "next/navigation";
 export default function SalesFood() {
+    const router = useRouter();
     return (
+        
         <div className={styles.pageContainer}>
             <div className={styles.headerRow}>
-        <img src="/Arrow_down.svg" alt="back" onClick={() => router.back()}/>
+        <img src="/Arrow_down.svg" alt="back" onClick={() => router.back("/sales_page")}/>
         <h1 className={styles.accessibilityTitle}>All Food</h1>
       </div>
       <div className={styles.filterButton}>

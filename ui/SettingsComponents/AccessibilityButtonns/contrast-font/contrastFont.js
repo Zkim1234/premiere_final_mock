@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "@/ui/settings-components/accessibility-buttons/contrast-font/contrastFont.module.css";
+import styles from "@/ui/SettingsComponents/AccessibilityButtonns/contrast-font/contrastFont.module.css";
 import Image from "next/image";
 import plusIcon from "@/public/settingsIcons/plus.svg";
 import minusIcon from "@/public/settingsIcons/minus.svg";

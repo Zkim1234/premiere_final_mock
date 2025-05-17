@@ -1,16 +1,20 @@
-import EventCard from '@/ui/full-sized-event-card/full-sized-event-card';
+"use client";
+import { useRouter } from 'next/navigation';
+import EventCard from '@/ui/FullSizedEventCard/FullSizedEventCard';
 import style from '@/app/sales_page/sales-page.module.css'
-import Header from '@/ui/header-component/header';
+import Header from '@/ui/HeaderComponent/Header';
 import Slideshow from '@/ui/FeaturedEventSlider/EventSlider';
+import NavBar from '@/ui/NavBar/NavBar';
 
 export default function EventPage() {
   return (
-    <div>
+    <div className={style.bodyContainer}>
       <Header sectionTitle="Discounts & Sales" /> 
       <Slideshow slides={slides} /> 
       <FoodCarousel />
       <ClothingCarousel />
       <MoreWithEvents />
+      <NavBar />
     </div>
   );
 }
@@ -34,13 +38,14 @@ const slides = [
 ];
 
 export function FoodCarousel() {
+  const router = useRouter();
   return (
     <div className={style.carouselWrapper}>
       <div className={style.carouselHeader}>
         <h3 className={style.carouselTitle}>Food</h3>
         <div className={style.subtitleContainer}>
           <h5 className={style.carouselSubtitle}>Find the best deals on food!</h5>
-          <h5 className={style.seeMore}>see more...</h5>
+          <h5 className={style.seeMore} onClick={() => router.push('/sales-food')}>see more...</h5>
         </div>
       </div>
       <div className={style.carouselScroll}>
@@ -87,7 +92,7 @@ export function ClothingCarousel() {
         <EventCard
           image="/images/zara_banner.png"
           title="Zara"
-          subtitle="Get 20% off Zara’s Cotton - Wool Cardigan"
+          subtitle="Get 20% off Zara's Cotton - Wool Cardigan"
           size="small"
         />
         <EventCard

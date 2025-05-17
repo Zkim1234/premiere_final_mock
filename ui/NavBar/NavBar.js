@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { useRouter, usePathname } from "next/navigation";
-import styles from "@/ui/nav-bar/nav-bar.module.css";
+import styles from "@/ui/NavBar/NavBar.module.css";
 
 export default function NavBar() {
   const router = useRouter();
@@ -14,22 +14,22 @@ export default function NavBar() {
   return (
     <div className={styles.navContainer}>
       <div
-        className={`${styles.navItem} ${isActive('/tutorial')}`}
-        onClick={() => router.push("/tutorial")}
+        className={`${styles.navItem} ${isActive('/event')}`}
+        onClick={() => router.push("/event")}
       >
         <img src="/navBarIcons/event_icon.svg" alt="Events" />
         <span>Events</span>
       </div>
       <div
-        className={`${styles.navItem} ${isActive('/sales-food')}`}
-        onClick={() => router.push("/sales-food")}
+        className={`${styles.navItem} ${isActive('/sales_page')}`}
+        onClick={() => router.push("/sales_page")}
       >
         <img src="/navBarIcons/Tag.svg" alt="Sales" />
         <span>Sales</span>
       </div>
       <div
-        className={`${styles.navItem} ${isActive('/tutorial')}`}
-        onClick={() => router.push("/tutorial")}
+        className={`${styles.navItem} ${isActive('/homepage')}`}
+        onClick={() => router.push("/homepage")}
       >
         <img src="/navBarIcons/House_01.svg" alt="Home" />
         <span>Home</span>

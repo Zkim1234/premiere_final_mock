@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import styles from "@/app/settings-page/settings.module.css";
-import SettingsButton from "@/ui/settings-components/settings-button/settings-button";
-import NavBar from "@/ui/nav-bar/nav-bar";
+import SettingsButton from "@/ui/SettingsComponents/SettingsButton/settings-button";
+import NavBar from "@/ui/NavBar/NavBar";
 import NextButton from "@/ui/onboarding/buttons/next-button";
 import { useRouter } from "next/navigation";
 

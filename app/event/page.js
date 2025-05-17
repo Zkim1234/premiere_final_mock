@@ -1,16 +1,18 @@
-import EventCard from '@/ui/full-sized-event-card/full-sized-event-card';
+import EventCard from '@/ui/FullSizedEventCard/FullSizedEventCard';
 import style from '@/app/event/event.module.css';
-import Header from '@/ui/header-component/header';
+import Header from '@/ui/HeaderComponent/Header';
 import Slideshow from '@/ui/FeaturedEventSlider/EventSlider';
+import NavBar from '@/ui/NavBar/NavBar';
 
 export default function EventPage() {
   return (
-    <div>
+    <div className={style.bodyContainer}>
       <Header sectionTitle="Featured this month" /> 
       <Slideshow slides={slides} /> 
       <CarouselComponent />
       <PopularEvents />
       <HandpickedCards />
+      <NavBar />
     </div>
   );
 }

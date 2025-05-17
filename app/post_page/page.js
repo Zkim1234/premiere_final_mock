@@ -4,7 +4,8 @@ import Image from 'next/image';
 import HeaderBar from '@/ui/post-header/post-header';
 import Slideshow from '@/ui/post-slider/post-slider';
 import styles from './post-page.module.css';
-import EventCard from '@/ui/full-sized-event-card/full-sized-event-card';
+import EventCard from '@/ui/FullSizedEventCard/FullSizedEventCard';
+import NavBar from '@/ui/NavBar/NavBar';
 
 const slides = [
   { image: '/images/weeknd_01.png' },
@@ -135,6 +136,7 @@ export default function EventPost() {
       <EventDetailsPage />
       <MoreLikeThis />
       <LearnMoreButton />
+      <NavBar />
     </div>
   );
 }

@@ -2,8 +2,8 @@
 import React from "react";
 import styles from "@/app/settings-page/accessibility/accessibility.module.css";
 import { useRouter } from "next/navigation"; 
-import ToggleDark from "@/ui/settings-components/accessibility-buttons/toggle-dark/toggle";
-import ContrastFont from "@/ui/settings-components/accessibility-buttons/contrast-font/contrastFont";
+import ToggleDark from "@/ui/SettingsComponents/AccessibilityButtonns/toggle-dark/toggle";
+import ContrastFont from "@/ui/SettingsComponents/AccessibilityButtonns/contrast-font/contrastFont";
 
 export default function AccessibilityPage() {
   const router = useRouter();

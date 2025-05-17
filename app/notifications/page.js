@@ -2,10 +2,10 @@
 import React from "react";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import NotificationCard from "@/ui/notification-component/new-notif";
+import NotificationCard from "@/ui/NotificationComponent/NewNotif";
 import styles from "@/app/notifications/notifications.module.css";
-import ReminderNotif from "@/ui/notif-reminder/reminder";
-import NavBar from "@/ui/nav-bar/nav-bar";
+import ReminderNotif from "@/ui/NotifReminder/Reminder";
+import NavBar from "@/ui/NavBar/NavBar";
 export default function Notifications() {
   const router = useRouter();
 
