@@ -3,7 +3,12 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  margin: 20px 0;
+  position: fixed;
+  padding: 15px 0;
+  top: 10px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
 
 .step {
@@ -19,5 +24,5 @@
 }
 
 .step.inactive {
-  background-color: #e4e4e4;
+  background-color: #556A8D;
 }

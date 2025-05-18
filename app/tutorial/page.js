@@ -60,7 +60,7 @@ export default function Tutorial() {
           {tutorialStep < 2 ? (
             <div className="flex flex-row w-full">
               {tutorialStep === 1 ? (
-                <div className="flex flex-row justify-between w-full">
+                <div className={styles.tutorialButtons}>
                   <SmallWhiteButton onClick={handleBackTutorial} text="Back" />
                   <SmallBlueButton onClick={handleTutorialNext} text="Next" />
                 </div>
@@ -71,7 +71,7 @@ export default function Tutorial() {
               )}
             </div>
           ) : (
-            <div className="flex flex-row justify-between w-full">
+            <div className={styles.tutorialButtonsDone}>
               <SmallWhiteButton onClick={handleBackTutorial} text="Back" />
               <SmallBlueButton
                 onClick={() => router.push("/homepage")}
@@ -88,7 +88,7 @@ export default function Tutorial() {
   if (isTutorial) {
     return (
       <div
-        className={`${styles.container} ${
+        className={`${styles.containerTutorial} ${
           tutorialStep === 0
             ? "bg-[#556A8D]"
             : tutorialStep === 1
@@ -96,10 +96,10 @@ export default function Tutorial() {
             : "bg-[#5D94AA]"
         }`}
       >
-        {tutorialStep < 2 && (
+        {tutorialStep <= 1 && (
           <button //skip button
-            onClick={() => setTutorialStep(2)}
-            className="absolute top-4 right-6 text-white font-medium underline text-[20px]"
+            onClick={() => router.push("/homepage")}
+            className={styles.skipButton}
           >
             Skip
           </button>
@@ -157,8 +157,7 @@ export default function Tutorial() {
                 Step 3: <br></br>Stay on the loop and start saving!
               </h2>
               <p>
-                We'll keep you in touch for events and deals happening in
-                Vancouver.
+                We'll keep you in touch for events and deals happening in Vancouver.
               </p>
               {tutorialButton()}
             </div>
@@ -172,7 +171,7 @@ export default function Tutorial() {
   return (
     <div className={styles.container}>
       {/* Progress bar */}
-      <div>
+      <div className={styles.progressBarContainer}>
         <ProgressBar currentStep={currentStep} />
       </div>
       {currentStep === 0 ? (
@@ -293,7 +292,7 @@ export default function Tutorial() {
           </p>
           <SmallWhiteButton
             text="Go Home"
-            onClick={() => router.push("/home")}
+            onClick={() => router.push("/homepage")}
           />
         </div>
       )}

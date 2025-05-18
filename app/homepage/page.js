@@ -61,13 +61,13 @@ export function CarouselComponent() {
         <EventCard
           image="/images/vancouvertour_banner.png"
           title="Vancouver Tour"
-          subtitle="Stanley Park/English Bay/Canada Place/Gas."
+          subtitle="Stanley Park/English Bay/Canada"
           size="small"
         />
         <EventCard
           image="/images/tourpass_banner.png"
           title="Vancouver Tour Pass"
-          subtitle="24 or 48-Hour Hop-On Hop-Off Trolley Tour Pass."
+          subtitle="24 or 48-Hour Hop-On Hop-Off Trolley"
           size="small"
         />
         <EventCard
@@ -95,7 +95,7 @@ export function PopularEvents() {
           <h5 className={style.seeMore} onClick={() => router.push("/event")}>see more...</h5>
         </div>
       </div>
-      <div className={style.eventCardContainer} onClick={() => router.push("/post_page")}>
+      <div className={style.eventCardContainer}>
         <EventCard
           image="/images/art_vancouver.jpg"
           title="Art Vancouver 2025"

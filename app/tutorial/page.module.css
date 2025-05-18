@@ -3,13 +3,27 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: white;
   padding: 20px;
+  color: black;
   min-height: 100vh;
 }
 
+.containerTutorial {
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
 .content {
+  margin-top: 30px;
   border: 1px solid #9da9bd;
   padding: 10px;
+  
 }
 
 .content h2 {
@@ -23,51 +37,112 @@
 }
 
 .nextButtonContainer {
+  margin-top: 20px;
+  margin-bottom: 20px;
   padding: 20px 0;
   width: 100%;
+  gap: 16px;
 }
 
-.tutorialContainer {
-  height: 100%;
+.buttonWrapper.single {
+  justify-content: flex-end;
+}
+
+.tutorialButtonContainer {
   width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+  padding: 20px 0;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+}
+
+.tutorialButtonWrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 15px;
+  position: relative;
+}
+
+
+.tutorialButtonWrapper.dual {
+  justify-content: space-between;
 }
 
 .tutorialInstruction {
   display: flex;
-  height: 42%;
+  height: 40%;
   max-width: 440px;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   text-align: center;
-  padding: 40px 30px;
-  padding-top: 60px;
+  padding: 30px 20px;
   background-color: #ffffff;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
+  border-radius: 25px 25px 0px 0px;
+  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  position: absolute;
   color: #052836;
+  line-height: 2.5rem;
+  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tutorialInstruction p {
+  line-height: 1.5rem;
+  margin-top: 0.5rem;
 }
 
 .tutorialImage {
   object-fit: contain;
   margin: 0;
   width: 294px;
-  height: auto;
   display: flex;
   justify-content: center;
-  top: 15%;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin-left: auto;
-  margin-right: auto;
   position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: -100px; /* Adjust this value to move the image up from center */
+}
+
+.tutorialButtons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 25px;
+}
+
+.tutorialButtonsDone{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: -25px;
+}
+.skipButton {
+  color: white;
+  font-size: 1.25rem;
+  text-decoration: underline;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 1001;
+}
+
+.tutorialContainer {
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 40%; /* Add padding to account for the fixed instruction box */
 }

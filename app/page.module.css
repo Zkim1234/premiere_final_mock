@@ -22,7 +22,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: .75rem;
 }
 
 @keyframes fadeIn {
@@ -41,6 +41,8 @@
   align-items: center;
   justify-content: center;
   padding: 2rem;
+  background-color: white;
+  color: black;
 }
 
 .mainText {
@@ -95,6 +97,7 @@
 
 .buttonContainer {
   width: 100%;
+  margin-top: 1rem;
   max-width: 300px;
   display: flex;
   flex-direction: column;
