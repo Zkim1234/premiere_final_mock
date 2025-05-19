@@ -12,7 +12,9 @@ export default function EventPage() {
       <div className={style.headerRow}>
         <h1 className={style.headerTitle}>Saved</h1>
       </div>
-      <p className={style.title}>Events</p>
+      <h2 className={style.title}>Events</h2>
+      <h5 className={style.subtitle}>Happening this Weekend</h5>
+      <p className={style.date}>Mar 21-23, 2025</p>
       <img
         src="/images/weeknd_01.png"
         alt="back"
