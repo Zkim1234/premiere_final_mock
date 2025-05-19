@@ -79,13 +79,14 @@ export function FoodCarousel() {
 }
 
 export function ClothingCarousel() {
+  const router = useRouter();
     return (
       <div className={style.carouselWrapper}>
         <div className={style.carouselHeader}>
           <h3 className={style.carouselTitle}>Clothing</h3>
           <div className={style.subtitleContainer}>
             <h5 className={style.carouselSubtitle}>Hot deals on clothes!</h5>
-            <h5 className={style.seeMore}>see more...</h5>
+            <h5 className={style.seeMore} onClick={() => router.push('/sales_page/sales-food')}>see more...</h5>
           </div>
         </div>
         <div className={style.carouselScroll}>
@@ -119,13 +120,14 @@ export function ClothingCarousel() {
   }
 
   export function MoreWithEvents() {
+    const router = useRouter();
     return (
       <div className={style.carouselWrapper}>
         <div className={style.carouselHeader}>
           <h3 className={style.carouselTitle}>More with Events</h3>
           <div className={style.subtitleContainer}>
             <h5 className={style.carouselSubtitle}>See what other deals you can get!</h5>
-            <h5 className={style.seeMore}>see more...</h5>
+            <h5 className={style.seeMore} onClick={() => router.push('/sales_page/sales-food')}>see more...</h5>
           </div>
         </div>
         <div className={style.carouselScroll}>

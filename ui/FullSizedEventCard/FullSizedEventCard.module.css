@@ -11,9 +11,15 @@
 }
 
 .normal {
-  width: 420px;
-  height: 290px;
+  width: 400px;
+  height: 271px;
 }
+
+.normal .imageWrapper {
+  flex: 0 0 60%;
+  padding-bottom: 25%;
+}
+
 
 .small {
   width: 190px;
@@ -29,12 +35,7 @@
 }
 
 .image {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
   border-radius: 12px 12px 0 0;
 }
 
@@ -72,4 +73,12 @@
 
 .bookmark:hover {
   transform: scale(1.1);
+}
+
+.description {
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  line-height: 1.3;
 }

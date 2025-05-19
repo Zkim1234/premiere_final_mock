@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import styles from './sales.module.css';
 
-export default function SalesCard ({image, alt, brandName, text, offer}){
+export default function SalesCard ({image, alt, brandName, text, offer, onClick}){
   const [bookmarked, setBookmarked] = useState(false);
 
-  const toggleBookmark = () => {
+  const toggleBookmark = (e) => {
+    e.stopPropagation();
     setBookmarked(!bookmarked);
   };
 
   return (
-    <div className={styles.salesCard}>
+    <div className={styles.salesCard} onClick={onClick}>
       <div className={styles.bookmarkIcon}>
         <img src={bookmarked ? "/bookmarks/saved-bookmark.svg" : "/bookmarks/unsaved-bookmark.svg"} alt="bookmark" onClick={toggleBookmark}/>
       </div>

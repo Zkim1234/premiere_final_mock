@@ -1,5 +1,5 @@
 'use client';
-
+import { useState } from 'react';
 import Image from 'next/image';
 import HeaderBar from '@/ui/PostHeader/post-header';
 import Slideshow from '@/ui/PostSlider/post-slider';
@@ -22,6 +22,12 @@ function PostPage() {
 }
 
 function EventDetailsPage() {
+  const [bookmarked, setBookmarked] = useState(false);
+
+  const toggleBookmark = (e) => {
+    e.stopPropagation();
+    setBookmarked(!bookmarked);
+  };
   return (
     <main className={styles.main}>
       <div className={styles.headerRow}>
@@ -31,12 +37,17 @@ function EventDetailsPage() {
           </h2>
           <p className={styles.artist}>The Weeknd</p>
         </div>
-
         <div className={styles.icons}>
-          <Image src="/bookmarks/saved-bookmark.svg" alt="Bookmark" width={54} height={54} />
+          <Image
+            src={bookmarked ? '/bookmarks/saved-bookmark.svg' : '/bookmarks/unsaved-bookmark.svg'}
+            alt="Bookmark"
+            width={54}
+            height={54}
+            onClick={toggleBookmark}
+            className={styles.bookmark}
+          />
         </div>
       </div>
-
       <div className={styles.infoGrid}>
         <div>
           <p className={styles.label}>Date</p>
@@ -130,7 +141,7 @@ function LearnMoreButton() {
 
 export default function EventPost() {
   return (
-    <div>
+    <div className={styles.bodyContainer}>
       <PostPage />
       <Slideshow slides={slides} />
       <EventDetailsPage />

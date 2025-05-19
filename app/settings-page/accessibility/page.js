@@ -10,7 +10,7 @@ export default function AccessibilityPage() {
   return (
     <div className={styles.pageContainer}>
       <div className={styles.headerRow}>
-        <img src="/Arrow_down.svg" alt="back" onClick={() => router.back()}/>
+        <img src="/blue_Arrow.svg" alt="back" onClick={() => router.back()}/>
         <h1 className={styles.accessibilityTitle}>Accessibility</h1>
       </div>
         <div className={styles.darkModeContainer}>

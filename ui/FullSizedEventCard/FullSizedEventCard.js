@@ -4,12 +4,12 @@ import styles from '@/ui/FullSizedEventCard/FullSizedEventCard.module.css';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
-export default function EventCard({ image, title, subtitle, highlight, size = 'normal' }) {
+export default function EventCard({ image, title, subtitle, description, highlight, size = 'normal' }) {
   const [bookmarked, setBookmarked] = useState(false);
   const router = useRouter();
 
   const toggleBookmark = (e) => {
-    e.stopPropagation(); // Stop the click event from bubbling up to the card
+    e.stopPropagation();
     setBookmarked(!bookmarked);
   };
 
@@ -23,10 +23,9 @@ export default function EventCard({ image, title, subtitle, highlight, size = 'n
       onClick={handleCardClick}
     >
       <div className={styles.imageWrapper}>
-        <Image
+        <img
           src={image}
           alt={title}
-          fill
           className={styles.image}
         />
       </div>
@@ -34,6 +33,7 @@ export default function EventCard({ image, title, subtitle, highlight, size = 'n
         <div className={styles.text}>
           <p className={styles.title}>{title}</p>
           <p className={styles.subtitle}>{subtitle}</p>
+          {description && <p className={styles.description}>{description}</p>}
         </div>
         <Image
           src={bookmarked ? '/bookmarks/saved-bookmark.svg' : '/bookmarks/unsaved-bookmark.svg'}

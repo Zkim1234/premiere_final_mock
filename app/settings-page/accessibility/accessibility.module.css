@@ -41,9 +41,6 @@
     cursor: pointer;
     position: absolute;
     left: 16px;
-    transform: rotate(180deg);
-    filter: brightness(0);
-    transition: filter 0.3s ease;
 }
 
 :global(.dark-mode) .headerRow {

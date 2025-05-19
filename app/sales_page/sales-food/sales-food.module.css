@@ -5,6 +5,10 @@
     margin: 0;
 }
 
+.salesCardContainer{
+    cursor: pointer;
+}
+
 .accessibilityTitle{
     color: #2d4063;
     margin: 0 auto;
@@ -26,26 +30,19 @@
     cursor: pointer;
     position: absolute;
     left: 16px;
-    transform: rotate(180deg);
-    filter: brightness(0);
-    transition: filter 0.3s ease;
 }
 
-.filterButton {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  color: #212325;
-  font-size: 1.25rem;
-  cursor: pointer;
-  padding: 0 8px;
-  gap: 12px;
-  margin-right: 20px;
-  margin-top: 16px;
-
-}
-
-.chevron {
-  width: 8px;
-  transform: rotate(90deg);
+.copiedMessage {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  color: #999A9B;
+  padding: 8px 24px;
+  border-radius: 20px;
+  font-size: 1rem;
+  z-index: 2000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  opacity: 0.95;
 }
