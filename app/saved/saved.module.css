@@ -1,0 +1,71 @@
+.bodyContainer {
+  background-color: white;
+  color: black;
+  height: 1750px;
+}
+
+.headerTitle {
+  color: #2d4063;
+  margin: 0 auto;
+  padding: 20px 10px;
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.bigImg {
+  width: 95%;
+  border-radius: 10px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background-color: #fafafa;
+}
+
+.headerRow img {
+  cursor: pointer;
+  position: absolute;
+  left: 16px;
+}
+
+.title {
+  font-size: 2rem;
+  padding: 10px;
+}
+
+.carouselWrapper {
+  overflow-x: auto;
+  margin-left: 20px;
+}
+.carouselScroll {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.carouselScroll > * {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+.carouselTitle {
+  padding-top: 15px;
+}
+
+.sectionHeader {
+  padding-top: 20px;
+  margin-left: 20px;
+}
+
+.promotionListContainer {
+  cursor: pointer;
+}

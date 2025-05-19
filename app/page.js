@@ -185,7 +185,10 @@ export default function Home() {
               text="Create an account"
               onClick={() => router.push("/tutorial")}
             />
-            <SmallWhiteButton text="Back to Login" onClick={handleBackToLogin} />
+            <SmallWhiteButton
+              text="Back to Login"
+              onClick={handleBackToLogin}
+            />
           </div>
         </div>
       )}

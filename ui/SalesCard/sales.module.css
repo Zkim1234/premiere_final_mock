@@ -4,13 +4,12 @@
   align-items: center;
   position: relative;
   padding: 20px 20px 20px 16px;
-  background: #FAFAFA;
-  box-shadow: 0 5px 16px 0 rgba(0,0,0,0.15);
+  background: #fafafa;
+  box-shadow: 0 5px 16px 0 rgba(0, 0, 0, 0.15);
   max-width: 401px;
   height: 136px;
   margin: 16px auto;
 }
-
 
 .bookmarkIcon {
   position: absolute;
@@ -81,11 +80,10 @@
 }
 
 .offerButton {
-  background-color: #FF4040;
+  background-color: #ff4040;
   color: white;
   border: none;
   border-radius: 5px;
   padding: 3px 15px;
   font-size: 15px;
-
 }

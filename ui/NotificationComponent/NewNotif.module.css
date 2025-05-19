@@ -6,6 +6,8 @@
   margin: 0.5% 0;
   box-sizing: border-box;
   display: flex;
+  align-items: center;
+  position: relative;
 }
 
 .notificationCardDefault {
@@ -16,13 +18,29 @@
   margin: 0.5% 0;
   box-sizing: border-box;
   display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.notificationImage {
+  display: block;
+  width: 100px;
+  object-fit: cover;
+}
+
+.notificationContent {
+  flex: 1;
+  padding-left: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .notificationHeader {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding-left: 10px;
+  align-items: center;
 }
 
 .brandName {
@@ -33,19 +51,19 @@
 }
 
 .newTag {
+  position: absolute;
+  top: 10px;
+  right: 20px;
   color: #17506b;
   font-size: 0.8125rem;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  margin: 0;
+  z-index: 2;
 }
 
 .notificationText {
   font-size: 0.8125rem;
   color: #222;
-  padding-left: 10px;
-}
-
-.notificationImage {
-  display: block;
 }

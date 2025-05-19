@@ -11,8 +11,8 @@ export default function OptionButton({ text, onClick }) {
   };
 
   return (
-    <div 
-      className={`${styles.optionButton} ${isChecked ? styles.checked : ''}`} 
+    <div
+      className={`${styles.optionButton} ${isChecked ? styles.checked : ""}`}
       onClick={handleClick}
     >
       <div className={styles.checkbox}></div>

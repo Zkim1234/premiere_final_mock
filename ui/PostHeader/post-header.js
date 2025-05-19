@@ -1,9 +1,9 @@
-'use client';
-import Image from 'next/image';
-import styles from './post-header.module.css';
-import { useRouter } from 'next/navigation';
+"use client";
+import Image from "next/image";
+import styles from "./post-header.module.css";
+import { useRouter } from "next/navigation";
 
-export default function HeaderBar({ title = 'Post', onBack }) {
+export default function HeaderBar({ title = "Post", onBack }) {
   const router = useRouter();
   return (
     <div className={styles.headerWrapper}>
@@ -14,7 +14,11 @@ export default function HeaderBar({ title = 'Post', onBack }) {
       <div className={styles.pageTitle}>{title}</div>
 
       <div className={styles.logoWrapper}>
-        <img src="/logos/small-logo.svg" alt="Premiere" onClick={() => router.push('/homepage')}/>
+        <img
+          src="/logos/small-logo.svg"
+          alt="Premiere"
+          onClick={() => router.push("/homepage")}
+        />
       </div>
     </div>
   );

@@ -1,11 +1,9 @@
 import styles from "./Promotion-list.module.css";
 import Image from "next/image";
 
-// Assumes discount is a number (not percentage)
 export default function PromotionList({ title, image, price, discount }) {
   let discountPrice = price - discount;
 
-  // Ensure discount price doesn't go below zero
   if (discountPrice < 0) {
     discountPrice = 0;
   }

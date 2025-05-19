@@ -5,7 +5,6 @@ export default function ToggleDark() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
-    // Set initial state from localStorage
     const savedMode = localStorage.getItem("darkMode") === "true";
     setIsDarkMode(savedMode);
     if (savedMode) {
@@ -23,8 +22,8 @@ export default function ToggleDark() {
   return (
     <div className={styles.toggleContainer}>
       <div className={styles.toggleLabel}>Dark Mode</div>
-      <div 
-        className={`${styles.toggleSwitch} ${isDarkMode ? styles.active : ''}`}
+      <div
+        className={`${styles.toggleSwitch} ${isDarkMode ? styles.active : ""}`}
         onClick={toggleDarkMode}
       >
         <div className={styles.toggleSlider}></div>

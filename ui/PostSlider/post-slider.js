@@ -1,6 +1,6 @@
-'use client';
-import { useState } from 'react';
-import styles from './post-slider.module.css';
+"use client";
+import { useState } from "react";
+import styles from "./post-slider.module.css";
 
 export default function Slideshow({ slides }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -30,10 +30,14 @@ export default function Slideshow({ slides }) {
         <div
           key={index}
           className={`${styles.slide} 
-            ${index === currentIndex ? styles.active : ''} 
-            ${isAnimating ? styles.fadeOut : ''}`}
+            ${index === currentIndex ? styles.active : ""} 
+            ${isAnimating ? styles.fadeOut : ""}`}
         >
-          <img src={slide.image} alt={`Slide ${index + 1}`} className={styles.slideImage} />
+          <img
+            src={slide.image}
+            alt={`Slide ${index + 1}`}
+            className={styles.slideImage}
+          />
         </div>
       ))}
 
@@ -48,7 +52,9 @@ export default function Slideshow({ slides }) {
         {slides.map((_, i) => (
           <span
             key={i}
-            className={`${styles.dot} ${i === currentIndex ? styles.activeDot : ''}`}
+            className={`${styles.dot} ${
+              i === currentIndex ? styles.activeDot : ""
+            }`}
             onClick={() => handleSlideChange(i)}
           ></span>
         ))}

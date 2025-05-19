@@ -1,28 +1,28 @@
 .headerWrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0;
-    height: 70px;
-    padding: 0 20px;
-    background-color: #fafafa;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  .backButton {
-    padding: 0;
-    cursor: pointer;
-  }
-  
-  .pageTitle {
-    position: absolute;
-    left: 45%;
-    margin: 0;
-    font-size: 20px;
-    font-weight: 500;
-    color: #223A6A;
-  }
-  
-  .logoWrapper{
-    cursor: pointer;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  height: 70px;
+  padding: 0 20px;
+  background-color: #fafafa;
+  border-bottom: 1px solid #ccc;
+}
+
+.backButton {
+  padding: 0;
+  cursor: pointer;
+}
+
+.pageTitle {
+  position: absolute;
+  left: 45%;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+  color: #223a6a;
+}
+
+.logoWrapper {
+  cursor: pointer;
+}

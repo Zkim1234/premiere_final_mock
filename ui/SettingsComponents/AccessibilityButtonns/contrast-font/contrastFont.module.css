@@ -1,4 +1,5 @@
-.contrastContainer, .fontContainer {
+.contrastContainer,
+.fontContainer {
   width: 401px;
   height: 100px;
   background: #e4e4e4;
@@ -39,7 +40,7 @@
   color: #212325;
   min-width: 38px;
   text-align: center;
-  background-color: #8A8A8A;
+  background-color: #8a8a8a;
   border-radius: 100%;
   padding: 5px;
   transition: all 0.3s ease;
@@ -61,7 +62,7 @@
 }
 
 :global(.dark-mode) .resetBtn {
-  background: #4D4F51;
+  background: #4d4f51;
   color: #ffffff;
 }
 

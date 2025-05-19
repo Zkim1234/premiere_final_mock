@@ -1,7 +1,7 @@
-'use client';
-import { useState } from 'react';
-import styles from './EventSlider.module.css';
-import { useRouter } from 'next/navigation';
+"use client";
+import { useState } from "react";
+import styles from "./EventSlider.module.css";
+import { useRouter } from "next/navigation";
 
 export default function Slideshow({ slides }) {
   const router = useRouter();
@@ -16,7 +16,7 @@ export default function Slideshow({ slides }) {
     setTimeout(() => {
       setCurrentIndex(newIndex);
       setIsAnimating(false);
-    }, 400); // match fade duration
+    }, 400);
   };
 
   const nextSlide = () => {
@@ -33,10 +33,15 @@ export default function Slideshow({ slides }) {
         <div
           key={index}
           className={`${styles.slide} 
-            ${index === currentIndex ? styles.active : ''} 
-            ${isAnimating ? styles.fadeOut : ''}`}
+            ${index === currentIndex ? styles.active : ""} 
+            ${isAnimating ? styles.fadeOut : ""}`}
         >
-          <img src={slide.image} alt={slide.title} className={styles.slideImage} onClick={() => router.push("/post_page")} />
+          <img
+            src={slide.image}
+            alt={slide.title}
+            className={styles.slideImage}
+            onClick={() => router.push("/post_page")}
+          />
           <div className={styles.caption}>
             <h3>{slide.title}</h3>
             <p>{slide.description}</p>
@@ -55,7 +60,9 @@ export default function Slideshow({ slides }) {
         {slides.map((_, i) => (
           <span
             key={i}
-            className={`${styles.dot} ${i === currentIndex ? styles.activeDot : ''}`}
+            className={`${styles.dot} ${
+              i === currentIndex ? styles.activeDot : ""
+            }`}
             onClick={() => handleSlideChange(i)}
           ></span>
         ))}

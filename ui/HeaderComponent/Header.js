@@ -7,13 +7,16 @@ export default function Header({ sectionTitle = "Featured This Month" }) {
   return (
     <div className={styles.headerWrapper}>
       <div className={styles.topBar}>
-        <div className={styles.locationMenu}>
+        <div
+          className={styles.locationMenu}
+          onClick={() => router.push("/settings-page")}
+        >
           <span className={styles.locationText}>Location</span>
           <img src="/white_arrow.svg" />
         </div>
         <div className={styles.icons}>
-          <img src="/search_icon.svg" onClick={() => router.push("/event")}/>
-          <img src="/Bell.svg" onClick={() => router.push("/notifications")}/>
+          <img src="/search_icon.svg" onClick={() => router.push("/event")} />
+          <img src="/Bell.svg" onClick={() => router.push("/notifications")} />
         </div>
       </div>
 

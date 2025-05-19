@@ -67,7 +67,7 @@
 
   .quadrantCards {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     cursor: pointer;
     margin-right: 20px;

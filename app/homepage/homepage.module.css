@@ -1,7 +1,7 @@
 .bodyContainer {
   background-color: white;
   color: black;
-  height: 2475px;
+  height: 2450px;
 }
 
 .carouselWrapper {
@@ -24,7 +24,6 @@
   margin-bottom: 15px;
 }
 
-
 .sectionHeader {
   padding-top: 40px;
   margin-left: 20px;
@@ -33,7 +32,6 @@
 .seeMore {
   color: #2b4570;
   cursor: pointer;
-
 }
 
 .subtitleContainer {
@@ -51,9 +49,8 @@
   margin-right: 20px;
   margin-left: 20px;
   cursor: pointer;
-  
 }
 
-.promotionListContainer{
+.promotionListContainer {
   cursor: pointer;
 }

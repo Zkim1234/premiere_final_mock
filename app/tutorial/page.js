@@ -157,7 +157,8 @@ export default function Tutorial() {
                 Step 3: <br></br>Stay on the loop and start saving!
               </h2>
               <p>
-                We'll keep you in touch for events and deals happening in Vancouver.
+                We'll keep you in touch for events and deals happening in
+                Vancouver.
               </p>
               {tutorialButton()}
             </div>

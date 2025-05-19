@@ -4,58 +4,55 @@
   height: 1680px;
 }
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .carouselWrapper {
-    overflow-x: auto;
-    margin-left: 20px;
-  }
-  
-  .carouselScroll {
-    display: flex;
-    flex-direction: row;
-    gap: 12px;
-    margin-bottom: 20px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-  }
-  
-  .carouselScroll > * {
-    flex: 0 0 auto;
-    scroll-snap-align: start;
-    margin-bottom: 15px;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-  .sectionHeader {
-    padding-top: 20px;
-    margin-left: 20px;
-  }
+.carouselWrapper {
+  overflow-x: auto;
+  margin-left: 20px;
+}
 
-  .seeMore {
-    color: #2B4570;
-    cursor: pointer;
-  }
+.carouselScroll {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
 
+.carouselScroll > * {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  margin-bottom: 15px;
+}
 
-  .subtitleContainer {
+.sectionHeader {
+  padding-top: 20px;
+  margin-left: 20px;
+}
+
+.seeMore {
+  color: #2b4570;
+  cursor: pointer;
+}
+
+.subtitleContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 20px;
   margin-right: 20px;
-  }
-  
-  .eventCardContainer {
-    display: flex;
-    flex-wrap: wrap;       
-    gap: 12px;   
-    margin-right: 20px;
-    margin-left: 20px;        
-  }
+}
 
-
+.eventCardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-right: 20px;
+  margin-left: 20px;
+}

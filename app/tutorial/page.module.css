@@ -23,7 +23,6 @@
   margin-top: 30px;
   border: 1px solid #9da9bd;
   padding: 10px;
-  
 }
 
 .content h2 {
@@ -67,7 +66,6 @@
   position: relative;
 }
 
-
 .tutorialButtonWrapper.dual {
   justify-content: space-between;
 }
@@ -109,10 +107,10 @@
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
-  margin-top: -100px; /* Adjust this value to move the image up from center */
+  margin-top: -100px;
 }
 
-.tutorialButtons{
+.tutorialButtons {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -120,7 +118,7 @@
   margin-top: 25px;
 }
 
-.tutorialButtonsDone{
+.tutorialButtonsDone {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -144,5 +142,5 @@
   margin: 0 auto;
   position: relative;
   min-height: 100vh;
-  padding-bottom: 40%; /* Add padding to account for the fixed instruction box */
+  padding-bottom: 40%;
 }

@@ -1,7 +1,14 @@
-import React, { useState } from 'react';
-import styles from './sales.module.css';
+import React, { useState } from "react";
+import styles from "./sales.module.css";
 
-export default function SalesCard ({image, alt, brandName, text, offer, onClick}){
+export default function SalesCard({
+  image,
+  alt,
+  brandName,
+  text,
+  offer,
+  onClick,
+}) {
   const [bookmarked, setBookmarked] = useState(false);
 
   const toggleBookmark = (e) => {
@@ -12,15 +19,19 @@ export default function SalesCard ({image, alt, brandName, text, offer, onClick}
   return (
     <div className={styles.salesCard} onClick={onClick}>
       <div className={styles.bookmarkIcon}>
-        <img src={bookmarked ? "/bookmarks/saved-bookmark.svg" : "/bookmarks/unsaved-bookmark.svg"} alt="bookmark" onClick={toggleBookmark}/>
+        <img
+          src={
+            bookmarked
+              ? "/bookmarks/saved-bookmark.svg"
+              : "/bookmarks/unsaved-bookmark.svg"
+          }
+          alt="bookmark"
+          onClick={toggleBookmark}
+        />
       </div>
       <div className={styles.salesCardContent}>
         <div className={styles.logoSection}>
-          <img 
-            src={image}
-            alt={alt}
-            className={styles.logo}
-          />
+          <img src={image} alt={alt} className={styles.logo} />
         </div>
         <div className={styles.offerSection}>
           <h2 className={styles.brandName}>{brandName}</h2>
@@ -32,5 +43,4 @@ export default function SalesCard ({image, alt, brandName, text, offer, onClick}
       </div>
     </div>
   );
-};
-
+}

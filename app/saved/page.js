@@ -1,56 +1,38 @@
 "use client";
 import EventCard from "@/ui/FullSizedEventCard/FullSizedEventCard";
-import style from "@/app/homepage/homepage.module.css";
-import Header from "@/ui/HeaderComponent/Header";
-import Slideshow from "@/ui/FeaturedEventSlider/EventSlider";
+import style from "@/app/saved/saved.module.css";
 import PromotionList from "@/ui/PromotionList/Promotion-list";
 import NavBar from "@/ui/NavBar/NavBar";
 import { useRouter } from "next/navigation";
 
 export default function EventPage() {
+  const router = useRouter();
   return (
     <div className={style.bodyContainer}>
-      <Header sectionTitle="For you" />
-      <Slideshow slides={slides} />
+      <div className={style.headerRow}>
+        <h1 className={style.headerTitle}>Saved</h1>
+      </div>
+      <p className={style.title}>Events</p>
+      <img
+        src="/images/weeknd_01.png"
+        alt="back"
+        className={style.bigImg}
+        onClick={() => router.push("/post_page")}
+      />
       <CarouselComponent />
-      <PopularEvents />
       <Promotions />
       <NavBar />
     </div>
   );
 }
 
-const slides = [
-  {
-    image: "/images/juno_awards.png",
-    title: "Juno Awards in Vancouver",
-    description: "Takes place at Rogers Arena. Sunday, March 30, 5:00PM..",
-  },
-  {
-    image: "/images/zara_sale.png",
-    title: "Zara Sale",
-    description: "Price drops and sales everyday at your local Zara.",
-  },
-  {
-    image: "/images/squamish_banner.png",
-    title: "Squamish Spring Dance (Grade 7-9)",
-    description:
-      "Squamish Nation Totem Hall\nFri, May 16, 2025 7:30 PM - 9:30 PM PDT",
-  },
-];
-
 export function CarouselComponent() {
   const router = useRouter();
   return (
     <div className={style.carouselWrapper}>
       <div className={style.carouselHeader}>
-        <h3 className={style.carouselTitle}>Recently viewed</h3>
-        <div className={style.subtitleContainer}>
-          <h5 className={style.carouselSubtitle}>Take another look here!!</h5>
-          <h5 className={style.seeMore} onClick={() => router.push("/event")}>
-            see more...
-          </h5>
-        </div>
+        <h3 className={style.carouselTitle}>Upcoming This Month</h3>
+        <h5 className={style.carouselSubtitle}>March - April</h5>
       </div>
       <div
         className={style.carouselScroll}
@@ -61,64 +43,65 @@ export function CarouselComponent() {
           title="Auto Show"
           subtitle="Vancouver International Auto Show."
           size="small"
+          initialBookmarked={true}
         />
         <EventCard
           image="/images/vancouvertour_banner.png"
           title="Vancouver Tour"
           subtitle="Stanley Park/English Bay/Canada"
           size="small"
+          initialBookmarked={true}
         />
         <EventCard
           image="/images/tourpass_banner.png"
           title="Vancouver Tour Pass"
           subtitle="24 or 48-Hour Hop-On Hop-Off Trolley"
           size="small"
+          initialBookmarked={true}
         />
         <EventCard
           image="/images/pacifichotel_banner.png"
           title="Pan Pacific Hotel"
           subtitle="Get 50% off meeting room rental."
           size="small"
+          initialBookmarked={true}
         />
       </div>
-    </div>
-  );
-}
-
-export function PopularEvents() {
-  const router = useRouter();
-
-  return (
-    <div className={style.wrapper}>
-      <div className={style.sectionHeader}>
-        <h3 className={style.sectionTitle}>More Events</h3>
-        <div className={style.subtitleContainer}>
-          <h5 className={style.carouselSubtitle}>
-            See what's in store for you!
-          </h5>
-          <h5 className={style.seeMore} onClick={() => router.push("/event")}>
-            see more...
-          </h5>
-        </div>
+      <div className={style.carouselHeader}>
+        <h3 className={style.carouselTitle}>Sales</h3>
+        <h5 className={style.carouselSubtitle}>March - April</h5>
       </div>
-      <div className={style.eventCardContainer}>
+      <div
+        className={style.carouselScroll}
+        onClick={() => router.push("/post_page")}
+      >
         <EventCard
-          image="/images/art_vancouver.jpg"
-          title="Art Vancouver 2025"
-          subtitle={`Vancouver Convention Centre East\nThu, Apr 24, 2025 6:00 PM - Sun, Apr 27, 2025 5:00 PM`}
-          size="normal"
+          image="\images\aritzia_banner.png"
+          title="Aritzia"
+          subtitle="Treat yourself and enjoy 10% off your purchase"
+          size="small"
+          initialBookmarked={true}
         />
         <EventCard
-          image="/images/banana_banner.png"
-          title="This is Bananas! 20th Anniversary Celebration Fundraiser"
-          subtitle="dtcenshouse.ca"
-          size="normal"
+          image="\images\blenz.jpg"
+          title="Blenz"
+          subtitle="Enjoy 10% off All Blenz pastries"
+          size="small"
+          initialBookmarked={true}
         />
         <EventCard
-          image="/images/swimming_banner.png"
-          title="Pedalheads Swim Open House - Fremont"
-          subtitle={`Pedalheads Swim | Fremont Village\nFri, Apr 18, 2025 9:00 AM - 2:00 PM PDT`}
-          size="normal"
+          image="\images\plenty.png"
+          title="Plenty outlet"
+          subtitle="Up to an Additional 40% off"
+          size="small"
+          initialBookmarked={true}
+        />
+        <EventCard
+          image="\images\Popeyes-Logo.png"
+          title="popeyes"
+          subtitle="For a limited time, get 20% off Popeyes wings"
+          size="small"
+          initialBookmarked={true}
         />
       </div>
     </div>
@@ -130,14 +113,9 @@ export function Promotions() {
   return (
     <main className={style.wrapper}>
       <div className={style.sectionHeader}>
-        <h3 className={style.sectionTitle}>Ongoing promotions</h3>
+        <h3 className={style.sectionTitle}>More Sales</h3>
         <div className={style.subtitleContainer}>
-          <h5 className={style.carouselSubtitle}>
-            See what's in store for you!
-          </h5>
-          <h5 className={style.seeMore} onClick={() => router.push("/event")}>
-            see more...
-          </h5>
+          <h5 className={style.carouselSubtitle}>your saved sales</h5>
         </div>
       </div>
       <div

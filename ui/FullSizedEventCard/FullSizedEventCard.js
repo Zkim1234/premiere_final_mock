@@ -1,11 +1,19 @@
-'use client';
-import { useState } from 'react';
-import styles from '@/ui/FullSizedEventCard/FullSizedEventCard.module.css';
-import Image from 'next/image';
-import { useRouter } from 'next/navigation';
+"use client";
+import { useState } from "react";
+import styles from "@/ui/FullSizedEventCard/FullSizedEventCard.module.css";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
 
-export default function EventCard({ image, title, subtitle, description, highlight, size = 'normal' }) {
-  const [bookmarked, setBookmarked] = useState(false);
+export default function EventCard({
+  image,
+  title,
+  subtitle,
+  description,
+  highlight,
+  size = "normal",
+  initialBookmarked,
+}) {
+  const [bookmarked, setBookmarked] = useState(initialBookmarked ?? false);
   const router = useRouter();
 
   const toggleBookmark = (e) => {
@@ -18,16 +26,14 @@ export default function EventCard({ image, title, subtitle, description, highlig
   };
 
   return (
-    <div 
-      className={`${styles.card} ${highlight ? styles.highlight : ''} ${styles[size]}`}
+    <div
+      className={`${styles.card} ${highlight ? styles.highlight : ""} ${
+        styles[size]
+      }`}
       onClick={handleCardClick}
     >
       <div className={styles.imageWrapper}>
-        <img
-          src={image}
-          alt={title}
-          className={styles.image}
-        />
+        <img src={image} alt={title} className={styles.image} />
       </div>
       <div className={styles.details}>
         <div className={styles.text}>
@@ -36,7 +42,11 @@ export default function EventCard({ image, title, subtitle, description, highlig
           {description && <p className={styles.description}>{description}</p>}
         </div>
         <Image
-          src={bookmarked ? '/bookmarks/saved-bookmark.svg' : '/bookmarks/unsaved-bookmark.svg'}
+          src={
+            bookmarked
+              ? "/bookmarks/saved-bookmark.svg"
+              : "/bookmarks/unsaved-bookmark.svg"
+          }
           width={24}
           height={24}
           alt="bookmark"

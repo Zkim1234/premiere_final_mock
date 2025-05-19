@@ -1,56 +1,56 @@
-.toggleContainer{
-    display: flex;
-    width: 401px;
-    height: 94px;
-    background-color: #E4E4E4;
-    border-radius: 5px;
-    margin: 0;
-    align-items: center;
-    padding: 25px;
-    transition: background-color 0.3s ease;
+.toggleContainer {
+  display: flex;
+  width: 401px;
+  height: 94px;
+  background-color: #e4e4e4;
+  border-radius: 5px;
+  margin: 0;
+  align-items: center;
+  padding: 25px;
+  transition: background-color 0.3s ease;
 }
 
 :global(.dark-mode) .toggleContainer {
-    background-color: #212325;
+  background-color: #212325;
 }
 
-.toggleLabel{
-    color: black;
-    font-size: 1.25rem;
-    transition: color 0.3s ease;
+.toggleLabel {
+  color: black;
+  font-size: 1.25rem;
+  transition: color 0.3s ease;
 }
 
 :global(.dark-mode) .toggleLabel {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .toggleSwitch {
-    width: 65px;
-    height: 34px;
-    background-color: #696969;
-    border-radius: 34px;
-    cursor: pointer;
-    position: relative;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    margin-left: 175px
+  width: 65px;
+  height: 34px;
+  background-color: #696969;
+  border-radius: 34px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  margin-left: 175px;
 }
 .toggleSlider {
-    height: 26px;
-    width: 26px;
-    background: #dfe1e1;
-    border-radius: 50%;
-    position: absolute;
-    left: 4px;
-    transition: all 0.3s ease;
+  height: 26px;
+  width: 26px;
+  background: #dfe1e1;
+  border-radius: 50%;
+  position: absolute;
+  left: 4px;
+  transition: all 0.3s ease;
 }
 :global(.dark-mode) .toggleSlider {
-    background: #ffffff;
+  background: #ffffff;
 }
 .toggleSwitch.active {
-    background-color: #4caf50;
+  background-color: #4caf50;
 }
 .toggleSwitch.active .toggleSlider {
-    transform: translateX(30px);
+  transform: translateX(30px);
 }
