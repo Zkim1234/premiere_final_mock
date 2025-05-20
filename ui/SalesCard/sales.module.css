@@ -35,38 +35,50 @@
 
 .salesCardContent {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 15px;
   flex: 1;
+  min-width: 0;
 }
 
 .logoSection {
+  width: 95px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .logo {
-  margin-left: 0px;
-  width: 150px;
+  width: 100%;
+  height: auto;
   border-radius: 5px;
+  object-fit: contain;
 }
 
 .offerSection {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
   gap: 4px;
 }
 
 .brandName {
   font-size: 1.25rem;
   font-weight: 600;
-  margin-top: -20px;
+  margin: 0;
   color: #1a1a1a;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .offerText {
   font-size: 0.8125rem;
   line-height: 1rem;
   color: #4a4a4a;
+  margin: 0;
+  overflow: hidden;
 }
 
 .actionsSection {

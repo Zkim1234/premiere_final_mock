@@ -9,9 +9,16 @@ export default function SalesFood() {
   const router = useRouter();
   const [copied, setCopied] = useState(false);
 
-  const handleCardClick = () => {
-    setCopied(true);
-    setTimeout(() => setCopied(false), 1500);
+  const handleCardClick = async () => {
+    if (typeof window !== 'undefined') {
+      try {
+        await navigator.clipboard.writeText('Offer copied!');
+        setCopied(true);
+        setTimeout(() => setCopied(false), 1500);
+      } catch (err) {
+        console.error('Failed to copy to clipboard:', err);
+      }
+    }
   };
 
   return (
