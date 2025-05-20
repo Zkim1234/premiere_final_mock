@@ -135,7 +135,7 @@ export function Promotions() {
           <h5 className={style.carouselSubtitle}>
             See what's in store for you!
           </h5>
-          <h5 className={style.seeMore} onClick={() => router.push("/event")}>
+          <h5 className={style.seeMore} onClick={() => router.push("/sales_page")}>
             see more...
           </h5>
         </div>

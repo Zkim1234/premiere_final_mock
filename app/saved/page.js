@@ -100,7 +100,7 @@ export function CarouselComponent() {
         />
         <EventCard
           image="\images\Popeyes-Logo.png"
-          title="popeyes"
+          title="Popeyes"
           subtitle="For a limited time, get 20% off Popeyes wings"
           size="small"
           initialBookmarked={true}

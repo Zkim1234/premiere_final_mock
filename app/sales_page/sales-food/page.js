@@ -14,7 +14,7 @@ export default function SalesFood() {
       try {
         await navigator.clipboard.writeText('Offer copied!');
         setCopied(true);
-        setTimeout(() => setCopied(false), 1500);
+        setTimeout(() => setCopied(false), 1000);
       } catch (err) {
         console.error('Failed to copy to clipboard:', err);
       }
